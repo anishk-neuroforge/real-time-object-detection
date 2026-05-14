@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>J.A.R.V.I.S. Vision Pro — AI Object Detection HUD</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+
+    :root {
+      --primary: #00f0ff;
+      --secondary: #00d4aa;
+      --accent: #ff3864;
+      --warn: #ffb800;
+      --bg: #05080c;
+      --panel: #0a0f14;
+      --glass: rgba(8, 12, 16, 0.85);
+      --border: rgba(0, 240, 255, 0.15);
+      --text: #e0f2f1;
+      --muted: #5a6a7a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      font-family: 'Rajdhani', sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      color: var(--text);
+      user-select: none;
+    }
+
+    /* ─── Loading Screen ─── */
+    #loader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: var(--bg);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 2rem;
+      transition: opacity 0.8s ease, visibility 0.8s;
+    }
+    #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .loader-ring {
+      width: 120px; height: 120px;
+      border: 2px solid transparent;
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 1.2s linear infinite;
+      position: relative;
+    }
+    .loader-ring::before, .loader-ring::after {
+      content: ''; position: absolute; border-radius: 50%; border: 2px solid transparent;
+    }
+    .loader-ring::before {
+      inset: 8px; border-top-color: var(--secondary);
+      animation: spin 0.9s linear infinite reverse;
+    }
+    .loader-ring::after {
+      inset: 16px; border-top-color: var(--accent);
+      animation: spin 0.6s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loader-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem; color: var(--primary);
+      letter-spacing: 0.2em; text-transform: uppercase;
+    }
+    .loader-progress {
+      width: 240px; height: 2px; background: rgba(0,240,255,0.1);
+      border-radius: 2px; overflow: hidden;
+    }
+    .loader-progress-bar {
+      height: 100%; width: 0%; background: var(--primary);
+      box-shadow: 0 0 10px var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    /* ─── Main Camera HUD ─── */
+    .camera-panel {
+      flex: 1; position: relative;
+      background: #000; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    video, #main-canvas, #hud-canvas {
+      position: absolute; width: 100%; height: 100%; object-fit: cover;
+    }
+    #main-canvas { z-index: 2; }
+    #hud-canvas { z-index: 3; pointer-events: none; }
+
+    /* Scanning line */
+    .scan-line {
+      position: absolute; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      box-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary);
+      animation: scan 4s ease-in-out infinite;
+      z-index: 4; pointer-events: none; opacity: 0.6;
+    }
+    @keyframes scan {
+      0%, 100% { top: 5%; opacity: 0; }
+      10% { opacity: 0.6; }
+      90% { opacity: 0.6; }
+      50% { top: 95%; }
+    }
+
+    /* Corner brackets */
+    .hud-corner {
+      position: absolute; width: 40px; height: 40px;
+      border: 2px solid var(--primary); z-index: 4;
+      opacity: 0.6; pointer-events: none;
+    }
+    .hud-corner.tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+    .hud-corner.tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+    .hud-corner.bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+    .hud-corner.br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+
+    /* Crosshair */
+    .crosshair {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); z-index: 4;
+      pointer-events: none; opacity: 0.3;
+    }
+    .crosshair::before, .crosshair::after {
+      content: ''; position: absolute; background: var(--primary);
+    }
+    .crosshair::before { width: 1px; height: 30px; left: 50%; top: -15px; transform: translateX(-50%); }
+    .crosshair::after { width: 30px; height: 1px; top: 50%; left: -15px; transform: translateY(-50%); }
+
+    /* HUD Stats overlay */
+    .hud-stats {
+      position: absolute; top: 20px; left: 70px; z-index: 5;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+      color: var(--primary); opacity: 0.8;
+      display: flex; gap: 1.5rem;
+    }
+    .hud-stat { display: flex; align-items: center; gap: 0.4rem; }
+    .hud-stat .val { color: var(--text); font-weight: 500; }
+    .hud-stat .label { color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* Recording indicator */
+    .rec-indicator {
+      position: absolute; top: 20px; right: 70px; z-index: 5;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+      color: var(--accent); opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .rec-indicator.active { opacity: 1; }
+    .rec-dot {
+      width: 8px; height: 8px; background: var(--accent); border-radius: 50%;
+      animation: recPulse 1s infinite;
+    }
+    @keyframes recPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+    /* Scene tag */
+    .scene-tag {
+      position: absolute; bottom: 30px; left: 50%;
+      transform: translateX(-50%); z-index: 5;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(8px);
+      border: 1px solid var(--border); border-radius: 20px;
+      padding: 0.4rem 1.2rem;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
+      color: var(--secondary); letter-spacing: 0.1em;
+      text-transform: uppercase; opacity: 0; transition: opacity 0.5s;
+    }
+    .scene-tag.visible { opacity: 1; }
+
+    /* ─── Side Panel ─── */
+    .jarvis-panel {
+      width: 380px; min-width: 320px;
+      background: var(--glass); backdrop-filter: blur(20px);
+      border-left: 1px solid var(--border);
+      display: flex; flex-direction: column;
+      overflow: hidden; position: relative;
+    }
+    .jarvis-panel::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    }
+
+    /* Header */
+    .jarvis-header {
+      padding: 1.2rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .jarvis-title {
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .status-ring {
+      width: 12px; height: 12px; border-radius: 50%;
+      border: 2px solid var(--secondary);
+      position: relative;
+    }
+    .status-ring::after {
+      content: ''; position: absolute; inset: -4px;
+      border-radius: 50%; border: 1px solid var(--secondary);
+      animation: statusPing 2s infinite;
+    }
+    @keyframes statusPing { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(2); opacity: 0; } }
+    .status-ring.online { background: var(--secondary); box-shadow: 0 0 8px var(--secondary); }
+    .status-ring.offline { background: var(--accent); border-color: var(--accent); }
+    .status-ring.offline::after { border-color: var(--accent); }
+
+    .jarvis-title h1 {
+      font-size: 1.1rem; font-weight: 600; letter-spacing: 0.15em;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      text-transform: uppercase;
+    }
+    .version-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.6rem;
+      color: var(--muted); border: 1px solid var(--border);
+      padding: 0.15rem 0.4rem; border-radius: 4px;
+    }
+
+    /* Performance Bar */
+    .perf-bar {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .perf-cell {
+      background: var(--panel); padding: 0.6rem;
+      text-align: center;
+    }
+    .perf-cell .num {
+      font-family: 'JetBrains Mono', monospace; font-size: 1rem;
+      color: var(--primary); font-weight: 700;
+    }
+    .perf-cell .lbl {
+      font-size: 0.6rem; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.2rem;
+    }
+
+    /* Detection Panel */
+    .detection-panel {
+      flex: 1; overflow-y: auto;
+      padding: 1rem 1.5rem;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .panel-section h3 {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+      color: var(--muted); text-transform: uppercase;
+      letter-spacing: 0.15em; margin-bottom: 0.8rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .panel-section h3::before {
+      content: ''; display: inline-block; width: 6px; height: 6px;
+      background: var(--secondary); border-radius: 1px;
+    }
+
+    .detection-grid {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 0.5rem 1rem;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;
+    }
+    .detection-row {
+      display: contents;
+    }
+    .detection-row .name {
+      color: var(--secondary); font-weight: 600;
+      border-bottom: 1px solid rgba(0,212,170,0.1);
+      padding-bottom: 0.3rem;
+    }
+    .detection-row .conf {
+      color: var(--text); text-align: right;
+      border-bottom: 1px solid rgba(0,212,170,0.1);
+      padding-bottom: 0.3rem;
+    }
+    .detection-row .meta {
+      grid-column: 1 / -1;
+      font-size: 0.6rem; color: var(--muted);
+      padding-bottom: 0.5rem;
+    }
+    .empty-state {
+      color: var(--muted); font-style: italic;
+      font-size: 0.75rem; text-align: center; padding: 1rem 0;
+    }
+
+    /* Confidence bar */
+    .conf-bar-bg {
+      width: 100%; height: 3px; background: rgba(0,240,255,0.1);
+      border-radius: 2px; margin-top: 0.2rem; overflow: hidden;
+    }
+    .conf-bar-fill {
+      height: 100%; background: var(--secondary);
+      border-radius: 2px; transition: width 0.3s ease;
+      box-shadow: 0 0 6px var(--secondary);
+    }
+
+    /* Chat Log */
+    .chat-log {
+      background: rgba(5,8,12,0.6); border: 1px solid var(--border);
+      border-radius: 8px; padding: 0.8rem;
+      max-height: 220px; overflow-y: auto;
+      display: flex; flex-direction: column; gap: 0.6rem;
+    }
+    .message {
+      background: rgba(0,240,255,0.03);
+      border-left: 2px solid var(--primary);
+      padding: 0.5rem 0.7rem; border-radius: 0 6px 6px 0;
+      font-size: 0.75rem; line-height: 1.5;
+      animation: msgIn 0.3s ease;
+    }
+    @keyframes msgIn {
+      from { opacity: 0; transform: translateX(-10px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .message .sender {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700; color: var(--primary);
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .message .time {
+      color: var(--muted); font-size: 0.6rem; margin-left: 0.5rem;
+    }
+    .message.system { border-left-color: var(--warn); }
+    .message.system .sender { color: var(--warn); }
+    .message.error { border-left-color: var(--accent); }
+    .message.error .sender { color: var(--accent); }
+
+    /* Controls */
+    .controls {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--border);
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+    }
+    .btn {
+      background: transparent; border: 1px solid var(--border);
+      color: var(--text); padding: 0.6rem 0.8rem;
+      border-radius: 6px; font-family: 'Rajdhani', sans-serif;
+      font-size: 0.75rem; font-weight: 600; cursor: pointer;
+      transition: all 0.2s; text-transform: uppercase;
+      letter-spacing: 0.05em; display: flex;
+      align-items: center; justify-content: center; gap: 0.4rem;
+    }
+    .btn:hover {
+      border-color: var(--primary); color: var(--primary);
+      background: rgba(0,240,255,0.05);
+      box-shadow: 0 0 12px rgba(0,240,255,0.15);
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn.primary { border-color: var(--secondary); color: var(--secondary); }
+    .btn.primary:hover { background: rgba(0,212,170,0.1); box-shadow: 0 0 12px rgba(0,212,170,0.2); }
+    .btn.accent { border-color: var(--accent); color: var(--accent); }
+    .btn.accent:hover { background: rgba(255,56,100,0.1); box-shadow: 0 0 12px rgba(255,56,100,0.2); }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .footer-note {
+      padding: 0 1.5rem 1rem;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.55rem;
+      color: var(--muted); text-align: center;
+    }
+    .footer-note kbd {
+      background: rgba(0,240,255,0.1); border: 1px solid var(--border);
+      padding: 0.05rem 0.3rem; border-radius: 3px; font-size: 0.55rem;
+    }
+
+    /* Voice wave animation */
+    .voice-wave {
+      display: flex; align-items: center; gap: 2px; height: 16px;
+    }
+    .voice-wave span {
+      width: 2px; background: var(--secondary);
+      border-radius: 1px; animation: wave 0.8s ease infinite;
+    }
+    .voice-wave span:nth-child(2) { animation-delay: 0.1s; }
+    .voice-wave span:nth-child(3) { animation-delay: 0.2s; }
+    .voice-wave span:nth-child(4) { animation-delay: 0.3s; }
+    .voice-wave span:nth-child(5) { animation-delay: 0.15s; }
+    @keyframes wave {
+      0%, 100% { height: 4px; }
+      50% { height: 14px; }
+    }
+    .voice-wave.mute span { animation: none; height: 3px; opacity: 0.3; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      .jarvis-panel { width: 100%; height: 45vh; min-width: unset; border-left: none; border-top: 1px solid var(--border); }
+      .camera-panel { flex: none; height: 55vh; }
+    }
+    @media (max-width: 500px) {
+      .jarvis-panel { height: 50vh; }
+      .camera-panel { height: 50vh; }
+      .controls { grid-template-columns: 1fr; }
+    }
+  </style>
+<base target="_blank">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loader">
+  <div class="loader-ring"></div>
+  <div class="loader-text" id="loader-text">Initializing Neural Network...</div>
+  <div class="loader-progress"><div class="loader-progress-bar" id="loader-bar"></div></div>
+  <div style="font-size:0.65rem;color:var(--muted);margin-top:0.5rem;">TensorFlow.js · COCO-SSD · WebGL</div>
+</div>
+
+<!-- Camera HUD -->
+<div class="camera-panel">
+  <video id="webcam" autoplay playsinline muted></video>
+  <canvas id="main-canvas"></canvas>
+  <canvas id="hud-canvas"></canvas>
+
+  <div class="scan-line"></div>
+  <div class="hud-corner tl"></div>
+  <div class="hud-corner tr"></div>
+  <div class="hud-corner bl"></div>
+  <div class="hud-corner br"></div>
+  <div class="crosshair"></div>
+
+  <div class="hud-stats">
+    <div class="hud-stat"><span class="label">FPS</span><span class="val" id="fps-val">--</span></div>
+    <div class="hud-stat"><span class="label">OBJ</span><span class="val" id="obj-val">--</span></div>
+    <div class="hud-stat"><span class="label">LAT</span><span class="val" id="lat-val">--</span></div>
+    <div class="hud-stat"><span class="label">SCENE</span><span class="val" id="scene-val">--</span></div>
+  </div>
+
+  <div class="rec-indicator" id="rec-indicator">
+    <div class="rec-dot"></div><span>REC</span><span id="rec-time">00:00</span>
+  </div>
+
+  <div class="scene-tag" id="scene-tag">Analyzing Environment...</div>
+</div>
+
+<!-- Side Panel -->
+<div class="jarvis-panel">
+  <div class="jarvis-header">
+    <div class="jarvis-title">
+      <div class="status-ring online" id="status-ring"></div>
+      <h1>J.A.R.V.I.S. Vision</h1>
+    </div>
+    <span class="version-tag">v3.0 PRO</span>
+  </div>
+
+  <div class="perf-bar">
+    <div class="perf-cell"><div class="num" id="perf-fps">--</div><div class="lbl">FPS</div></div>
+    <div class="perf-cell"><div class="num" id="perf-obj">--</div><div class="lbl">Objects</div></div>
+    <div class="perf-cell"><div class="num" id="perf-conf">--</div><div class="lbl">Avg Conf</div></div>
+  </div>
+
+  <div class="detection-panel">
+    <div class="panel-section">
+      <h3>Real-Time Detections</h3>
+      <div id="detections-container">
+        <div class="empty-state">Waiting for visual feed...</div>
+      </div>
+    </div>
+
+    <div class="panel-section">
+      <h3>System Log</h3>
+      <div class="chat-log" id="chat-log">
+        <div class="message">
+          <span class="sender">J.A.R.V.I.S.</span>
+          <span class="time">00:00:00</span>
+          <div>Neural link established. Systems nominal.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="btn" id="btn-screenshot" title="Space">
+      <span>📷</span> Capture
+    </button>
+    <button class="btn primary" id="btn-voice" title="V">
+      <span class="voice-wave" id="voice-icon"><span></span><span></span><span></span><span></span><span></span></span>
+      Voice
+    </button>
+    <button class="btn" id="btn-mute" title="M">
+      <span>🔊</span> <span id="mute-text">Mute</span>
+    </button>
+    <button class="btn accent" id="btn-stop" title="S">
+      <span>⏹</span> Stop
+    </button>
+  </div>
+
+  <div class="footer-note">
+    <kbd>Space</kbd> Capture · <kbd>M</kbd> Mute · <kbd>V</kbd> Voice · <kbd>S</kbd> Stop · <kbd>R</kbd> Restart
+  </div>
+</div>
+
+<!-- TensorFlow.js -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.2.2/dist/coco-ssd.min.js"></script>
+
+<script>
+  (function() {
+    'use strict';
+
+    // ─── State ───
+    const state = {
+      model: null,
+      stream: null,
+      animationId: null,
+      isRunning: false,
+      speakEnabled: true,
+      voiceEnabled: false,
+      lastSpeakTime: 0,
+      frameCount: 0,
+      lastFpsTime: performance.now(),
+      fps: 0,
+      detections: [],
+      trackedObjects: new Map(), // id -> {class, lastSeen, box}
+      nextTrackId: 1,
+      sceneContext: null,
+      screenshotCount: 0,
+      startTime: Date.now(),
+      recognition: null,
+      voiceQueue: [],
+      isSpeaking: false,
+      audioCtx: null
+    };
+
+    // ─── DOM ───
+    const $ = id => document.getElementById(id);
+    const video = $('webcam');
+    const mainCanvas = $('main-canvas');
+    const mainCtx = mainCanvas.getContext('2d');
+    const hudCanvas = $('hud-canvas');
+    const hudCtx = hudCanvas.getContext('2d');
+    const detectionsContainer = $('detections-container');
+    const chatLog = $('chat-log');
+    const loader = $('loader');
+    const loaderText = $('loader-text');
+    const loaderBar = $('loader-bar');
+    const statusRing = $('status-ring');
+    const voiceIcon = $('voice-icon');
+    const sceneTag = $('scene-tag');
+
+    // ─── Utils ───
+    const now = () => new Date();
+    const fmtTime = d => d.toTimeString().split(' ')[0];
+    const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+    const dist = (a, b) => Math.sqrt((a[0]-b[0])**2 + (a[1]-b[1])**2);
+    const center = box => [box[0] + box[2]/2, box[1] + box[3]/2];
+    const iou = (a, b) => {
+      const x1 = Math.max(a[0], b[0]), y1 = Math.max(a[1], b[1]);
+      const x2 = Math.min(a[0]+a[2], b[0]+b[2]), y2 = Math.min(a[1]+a[3], b[1]+b[3]);
+      const inter = Math.max(0, x2-x1) * Math.max(0, y2-y1);
+      const areaA = a[2]*a[3], areaB = b[2]*b[3];
+      return inter / (areaA + areaB - inter + 1e-6);
+    };
+
+    // ─── Logger ───
+    function log(sender, text, type = 'info') {
+      const msg = document.createElement('div');
+      msg.className = `message ${type}`;
+      msg.innerHTML = `
+        <span class="sender">${sender}</span>
+        <span class="time">${fmtTime(now())}</span>
+        <div>${text}</div>
+      `;
+      chatLog.appendChild(msg);
+      msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      while (chatLog.children.length > 30) chatLog.removeChild(chatLog.firstChild);
+    }
+
+    // ─── Speech ───
+    const synth = window.speechSynthesis;
+    function getVoice() {
+      const voices = synth.getVoices();
+      // Prefer British male-like voices, fallback to any en-US
+      return voices.find(v => v.lang === 'en-GB' && /male|daniel|google uk/i.test(v.name)) ||
+             voices.find(v => v.lang === 'en-US' && v.name.includes('Google')) ||
+             voices.find(v => v.lang === 'en-US') ||
+             voices[0];
+    }
+
+    function speak(text, priority = false) {
+      if (!state.speakEnabled) return;
+      if (priority && synth.speaking) synth.cancel();
+      if (!priority && (synth.speaking || state.voiceQueue.length > 2)) {
+        state.voiceQueue.push(text);
+        return;
+      }
+      const u = new SpeechSynthesisUtterance(text);
+      u.rate = 0.92; u.pitch = 0.95; u.volume = 0.9;
+      u.voice = getVoice();
+      u.onend = () => {
+        state.isSpeaking = false;
+        if (state.voiceQueue.length) speak(state.voiceQueue.shift(), true);
+      };
+      state.isSpeaking = true;
+      synth.speak(u);
+    }
+
+    // ─── Loading ───
+    function setLoad(pct, text) {
+      loaderBar.style.width = pct + '%';
+      if (text) loaderText.textContent = text;
+    }
+
+    // ─── Model ───
+    async function loadModel() {
+      setLoad(10, 'Loading TensorFlow Runtime...');
+      await new Promise(r => setTimeout(r, 300));
+      setLoad(40, 'Fetching COCO-SSD Weights...');
+      state.model = await cocoSsd.load({ base: 'mobilenet_v2' });
+      setLoad(80, 'Compiling Shaders...');
+      await new Promise(r => setTimeout(r, 200));
+      setLoad(100, 'Ready');
+      await new Promise(r => setTimeout(r, 400));
+      loader.classList.add('hidden');
+      log('J.A.R.V.I.S.', 'Visual cortex online. COCO-SSD MobileNet v2 loaded.', 'system');
+    }
+
+    // ─── Camera ───
+    async function startCamera() {
+      try {
+        state.stream = await navigator.mediaDevices.getUserMedia({
+          video: { width: { ideal: 1280 }, height: { ideal: 720 }, facingMode: 'user' }
+        });
+        video.srcObject = state.stream;
+        await video.play();
+
+        const w = video.videoWidth || 1280;
+        const h = video.videoHeight || 720;
+        mainCanvas.width = w; mainCanvas.height = h;
+        hudCanvas.width = w; hudCanvas.height = h;
+
+        state.isRunning = true;
+        statusRing.className = 'status-ring online';
+        detectFrame();
+        drawHudLoop();
+
+        log('J.A.R.V.I.S.', 'Camera feed established. Scanning environment.', 'system');
+        speak('Vision systems online. I am ready, sir.');
+        sceneTag.classList.add('visible');
+      } catch (err) {
+        log('ERROR', 'Camera access denied. Check permissions.', 'error');
+        console.error(err);
+        statusRing.className = 'status-ring offline';
+      }
+    }
+
+    // ─── Object Tracking ───
+    function trackObjects(preds) {
+      const now = Date.now();
+      const active = new Set();
+
+      preds.forEach(p => {
+        let bestId = null, bestIoU = 0.3;
+        state.trackedObjects.forEach((obj, id) => {
+          if (obj.class === p.class) {
+            const d = iou(p.bbox, obj.box);
+            if (d > bestIoU) { bestIoU = d; bestId = id; }
+          }
+        });
+
+        if (bestId !== null) {
+          state.trackedObjects.get(bestId).box = p.bbox;
+          state.trackedObjects.get(bestId).lastSeen = now;
+          state.trackedObjects.get(bestId).score = p.score;
+          active.add(bestId);
+          p.trackId = bestId;
+        } else {
+          const id = state.nextTrackId++;
+          state.trackedObjects.set(id, { class: p.class, box: p.bbox, lastSeen: now, score: p.score, firstSeen: now });
+          active.add(id);
+          p.trackId = id;
+        }
+      });
+
+      // Remove stale
+      state.trackedObjects.forEach((obj, id) => {
+        if (now - obj.lastSeen > 1000) state.trackedObjects.delete(id);
+      });
+
+      return preds;
+    }
+
+    // ─── Scene Analysis ───
+    function analyzeScene(detections) {
+      const classes = [...new Set(detections.map(d => d.class))];
+      const counts = {};
+      detections.forEach(d => { counts[d.class] = (counts[d.class]||0)+1; });
+
+      let scene = 'Unknown';
+      if (classes.includes('person')) {
+        if (counts['person'] >= 3) scene = 'Group Setting';
+        else if (classes.includes('laptop') || classes.includes('keyboard')) scene = 'Workstation';
+        else if (classes.includes('tv') || classes.includes('couch')) scene = 'Living Room';
+        else if (classes.includes('bed')) scene = 'Bedroom';
+        else scene = 'Indoor Space';
+      } else if (classes.includes('car') || classes.includes('truck')) {
+        scene = 'Street / Traffic';
+      } else if (classes.includes('bird') || classes.includes('cat') || classes.includes('dog')) {
+        scene = 'Nature / Outdoor';
+      } else if (classes.length === 0) {
+        scene = 'Empty Frame';
+      }
+
+      if (scene !== state.sceneContext) {
+        state.sceneContext = scene;
+        $('scene-val').textContent = scene;
+        sceneTag.textContent = scene;
+        if (detections.length > 0) {
+          log('J.A.R.V.I.S.', `Scene context updated: ${scene}.`, 'system');
+        }
+      }
+      return scene;
+    }
+
+    // ─── Commentary ───
+    const commentaryBank = {
+      person: n => n === 1 ? 'I detect one person.' : `I detect ${n} people.`,
+      laptop: n => 'A laptop is present. Productivity mode inferred.',
+      cell_phone: n => 'Mobile device detected. Possibly checking notifications.',
+      keyboard: n => 'Typing peripheral active.',
+      mouse: n => 'Pointing device online.',
+      book: n => 'Reading material in frame.',
+      bottle: n => 'Hydration source detected.',
+      cup: n => 'Beverage container spotted.',
+      chair: n => 'Seating furniture present.',
+      tv: n => 'Display screen detected.',
+      dog: n => 'Canine detected. Friendly presence.',
+      cat: n => 'Feline detected. Stealth mode engaged.',
+      car: n => 'Vehicle in frame.',
+      bicycle: n => 'Bicycle detected. Eco-friendly transport.',
+      backpack: n => 'Personal cargo detected.'
+    };
+    const sassy = [
+      'Shall I prepare a report?',
+      'Interesting composition.',
+      'Should I alert the lab?',
+      'Your environment seems productive.',
+      'I can enhance this with a neural filter.',
+      'Noted for the archives.',
+      'Pattern recognition nominal.'
+    ];
+
+    function generateCommentary(detections) {
+      if (!detections.length) return;
+      const counts = {};
+      detections.forEach(d => { counts[d.class] = (counts[d.class]||0)+1; });
+      const unique = Object.keys(counts);
+
+      let text = '';
+      const priority = ['person', 'laptop', 'cell_phone', 'car', 'dog', 'cat'];
+      for (const cls of priority) {
+        if (counts[cls]) {
+          text += (commentaryBank[cls]?.(counts[cls]) || `${cls} detected. `) + ' ';
+          break;
+        }
+      }
+      if (!text && unique.length) {
+        text = `I see ${unique.slice(0,3).join(', ')}. `;
+      }
+      text += sassy[Math.floor(Math.random() * sassy.length)];
+
+      log('J.A.R.V.I.S.', text);
+      speak(text);
+    }
+
+    // ─── Drawing ───
+    function drawBoundingBoxes(predictions) {
+      mainCtx.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+      mainCtx.drawImage(video, 0, 0, mainCanvas.width, mainCanvas.height);
+
+      predictions.forEach((pred, i) => {
+        const [x, y, w, h] = pred.bbox;
+        const col = pred.class === 'person' ? '#00f0ff' : pred.class === 'car' || pred.class === 'truck' ? '#ff3864' : '#00d4aa';
+        const age = state.trackedObjects.get(pred.trackId)?.lastSeen ? 
+          (Date.now() - state.trackedObjects.get(pred.trackId).firstSeen) / 1000 : 0;
+
+        // Glow box
+        mainCtx.shadowColor = col;
+        mainCtx.shadowBlur = 10;
+        mainCtx.strokeStyle = col;
+        mainCtx.lineWidth = 2;
+        mainCtx.strokeRect(x, y, w, h);
+        mainCtx.shadowBlur = 0;
+
+        // Label bg
+        const label = `${pred.class} ${Math.round(pred.score*100)}%`;
+        mainCtx.font = '600 13px "JetBrains Mono", monospace';
+        const tw = mainCtx.measureText(label).width;
+        mainCtx.fillStyle = 'rgba(0,0,0,0.7)';
+        mainCtx.fillRect(x, y - 22, tw + 10, 20);
+
+        // Label text
+        mainCtx.fillStyle = col;
+        mainCtx.fillText(label, x + 5, y - 7);
+
+        // Track ID
+        if (pred.trackId) {
+          mainCtx.fillStyle = 'rgba(255,255,255,0.5)';
+          mainCtx.font = '10px "JetBrains Mono", monospace';
+          mainCtx.fillText(`#${pred.trackId}`, x + w - 25, y + h + 12);
+        }
+
+        // Corner accents
+        const cs = 8;
+        mainCtx.strokeStyle = col;
+        mainCtx.lineWidth = 2;
+        mainCtx.beginPath();
+        mainCtx.moveTo(x, y + cs); mainCtx.lineTo(x, y); mainCtx.lineTo(x + cs, y);
+        mainCtx.moveTo(x + w - cs, y); mainCtx.lineTo(x + w, y); mainCtx.lineTo(x + w, y + cs);
+        mainCtx.moveTo(x + w, y + h - cs); mainCtx.lineTo(x + w, y + h); mainCtx.lineTo(x + w - cs, y + h);
+        mainCtx.moveTo(x + cs, y + h); mainCtx.lineTo(x, y + h); mainCtx.lineTo(x, y + h - cs);
+        mainCtx.stroke();
+      });
+    }
+
+    function drawHudLoop() {
+      if (!state.isRunning) return;
+      hudCtx.clearRect(0, 0, hudCanvas.width, hudCanvas.height);
+
+      // Grid overlay
+      hudCtx.strokeStyle = 'rgba(0,240,255,0.03)';
+      hudCtx.lineWidth = 1;
+      const gs = 60;
+      for (let x = 0; x < hudCanvas.width; x += gs) {
+        hudCtx.beginPath(); hudCtx.moveTo(x, 0); hudCtx.lineTo(x, hudCanvas.height); hudCtx.stroke();
+      }
+      for (let y = 0; y < hudCanvas.height; y += gs) {
+        hudCtx.beginPath(); hudCtx.moveTo(0, y); hudCtx.lineTo(hudCanvas.width, y); hudCtx.stroke();
+      }
+
+      // Center reticle circle
+      const cx = hudCanvas.width / 2, cy = hudCanvas.height / 2;
+      hudCtx.strokeStyle = 'rgba(0,240,255,0.15)';
+      hudCtx.lineWidth = 1;
+      hudCtx.beginPath();
+      hudCtx.arc(cx, cy, 40, 0, Math.PI * 2);
+      hudCtx.stroke();
+      hudCtx.beginPath();
+      hudCtx.arc(cx, cy, 120, 0, Math.PI * 2);
+      hudCtx.setLineDash([5, 15]);
+      hudCtx.stroke();
+      hudCtx.setLineDash([]);
+
+      requestAnimationFrame(drawHudLoop);
+    }
+
+    // ─── Detection List ───
+    function updateDetectionList(predictions) {
+      if (!predictions.length) {
+        detectionsContainer.innerHTML = '<div class="empty-state">No objects in frame</div>';
+        return;
+      }
+      // Sort by confidence
+      const sorted = [...predictions].sort((a, b) => b.score - a.score).slice(0, 10);
+      let html = '<div class="detection-grid">';
+      sorted.forEach(p => {
+        const col = p.class === 'person' ? 'var(--primary)' : p.class === 'car' ? 'var(--accent)' : 'var(--secondary)';
+        html += `
+          <div class="detection-row">
+            <div class="name" style="color:${col}">${p.class} <small style="color:var(--muted)">#${p.trackId||'?'}</small></div>
+            <div class="conf">${Math.round(p.score*100)}%</div>
+            <div class="meta">
+              <div class="conf-bar-bg"><div class="conf-bar-fill" style="width:${p.score*100}%;background:${col}"></div></div>
+            </div>
+          </div>
+        `;
+      });
+      html += '</div>';
+      detectionsContainer.innerHTML = html;
+    }
+
+    // ─── Main Loop ───
+    async function detectFrame() {
+      if (!state.isRunning || !video.videoWidth) {
+        if (state.isRunning) state.animationId = requestAnimationFrame(detectFrame);
+        return;
+      }
+
+      const t0 = performance.now();
+
+      // Detect
+      const rawPreds = await state.model.detect(video);
+      const preds = rawPreds.filter(p => p.score > 0.5);
+
+      // Track
+      trackObjects(preds);
+      state.detections = preds;
+
+      // Draw
+      drawBoundingBoxes(preds);
+      updateDetectionList(preds);
+      analyzeScene(preds);
+
+      // FPS
+      state.frameCount++;
+      const now = performance.now();
+      if (now - state.lastFpsTime >= 1000) {
+        state.fps = state.frameCount;
+        state.frameCount = 0;
+        state.lastFpsTime = now;
+        $('fps-val').textContent = state.fps;
+        $('perf-fps').textContent = state.fps;
+      }
+      $('obj-val').textContent = preds.length;
+      $('perf-obj').textContent = preds.length;
+      const avgConf = preds.length ? Math.round(preds.reduce((a,b)=>a+b.score,0)/preds.length*100) : 0;
+      $('perf-conf').textContent = avgConf + '%';
+
+      // Latency
+      const lat = Math.round(performance.now() - t0);
+      $('lat-val').textContent = lat + 'ms';
+
+      // Commentary (every 4s)
+      const time = Date.now();
+      if (time - state.lastSpeakTime > 4000 && preds.length > 0) {
+        state.lastSpeakTime = time;
+        generateCommentary(preds);
+      }
+
+      state.animationId = requestAnimationFrame(detectFrame);
+    }
+
+    // ─── Screenshot ───
+    function screenshot() {
+      const composite = document.createElement('canvas');
+      composite.width = mainCanvas.width;
+      composite.height = mainCanvas.height;
+      const ctx = composite.getContext('2d');
+
+      ctx.drawImage(video, 0, 0);
+      ctx.drawImage(mainCanvas, 0, 0);
+      ctx.drawImage(hudCanvas, 0, 0);
+
+      // Stamp
+      ctx.fillStyle = 'rgba(0,0,0,0.6)';
+      ctx.fillRect(10, composite.height - 40, 280, 30);
+      ctx.font = '12px "JetBrains Mono", monospace';
+      ctx.fillStyle = '#00f0ff';
+      ctx.fillText(`J.A.R.V.I.S. Vision · ${fmtTime(now())} · ${state.detections.length} objects`, 20, composite.height - 20);
+
+      const link = document.createElement('a');
+      link.download = `jarvis_capture_${Date.now()}.png`;
+      link.href = composite.toDataURL('image/png');
+      link.click();
+
+      state.screenshotCount++;
+      log('SYSTEM', `Screenshot captured. Total: ${state.screenshotCount}.`, 'system');
+      speak('Screenshot saved to local storage.');
+    }
+
+    // ─── Voice Commands ───
+    function initVoice() {
+      if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+        log('ERROR', 'Voice recognition not supported in this browser.', 'error');
+        return false;
+      }
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      state.recognition = new SpeechRecognition();
+      state.recognition.continuous = true;
+      state.recognition.interimResults = false;
+      state.recognition.lang = 'en-US';
+
+      state.recognition.onresult = e => {
+        const cmd = e.results[e.results.length-1][0].transcript.toLowerCase().trim();
+        log('VOICE', `Heard: "${cmd}"`, 'system');
+
+        if (cmd.includes('mute') || cmd.includes('quiet')) {
+          toggleMute();
+          speak('Audio muted.');
+        } else if (cmd.includes('unmute') || cmd.includes('speak')) {
+          state.speakEnabled = true;
+          $('mute-text').textContent = 'Mute';
+          speak('Voice responses restored.');
+        } else if (cmd.includes('screenshot') || cmd.includes('capture') || cmd.includes('picture')) {
+          screenshot();
+        } else if (cmd.includes('stop') || cmd.includes('offline')) {
+          stopCamera();
+        } else if (cmd.includes('start') || cmd.includes('online')) {
+          if (!state.isRunning) startCamera();
+        } else if (cmd.includes('status')) {
+          speak(`Systems are ${state.isRunning ? 'online' : 'offline'}. ${state.detections.length} objects in frame.`);
+        } else {
+          speak('Command not recognized. Available commands: mute, unmute, screenshot, stop, start, status.');
+        }
+      };
+
+      state.recognition.onerror = e => {
+        if (e.error !== 'no-speech') log('VOICE', `Error: ${e.error}`, 'error');
+      };
+
+      return true;
+    }
+
+    function toggleVoice() {
+      if (!state.recognition && !initVoice()) return;
+      state.voiceEnabled = !state.voiceEnabled;
+      voiceIcon.classList.toggle('mute', !state.voiceEnabled);
+      if (state.voiceEnabled) {
+        state.recognition.start();
+        log('J.A.R.V.I.S.', 'Voice command interface active. Say "Jarvis" followed by a command.', 'system');
+        speak('Voice commands enabled.');
+      } else {
+        state.recognition.stop();
+        log('SYSTEM', 'Voice commands disabled.', 'system');
+      }
+    }
+
+    // ─── Controls ───
+    function toggleMute() {
+      state.speakEnabled = !state.speakEnabled;
+      $('mute-text').textContent = state.speakEnabled ? 'Mute' : 'Unmute';
+      log('SYSTEM', state.speakEnabled ? 'Voice responses enabled.' : 'J.A.R.V.I.S. muted.', 'system');
+    }
+
+    function stopCamera() {
+      state.isRunning = false;
+      if (state.stream) {
+        state.stream.getTracks().forEach(t => t.stop());
+        video.srcObject = null;
+      }
+      if (state.animationId) cancelAnimationFrame(state.animationId);
+      if (state.recognition) state.recognition.stop();
+      state.voiceEnabled = false;
+      voiceIcon.classList.add('mute');
+      statusRing.className = 'status-ring offline';
+      sceneTag.classList.remove('visible');
+      mainCtx.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+      hudCtx.clearRect(0, 0, hudCanvas.width, hudCanvas.height);
+      log('J.A.R.V.I.S.', 'Vision feed offline. Awaiting restart.', 'system');
+      speak('Vision offline. Call me when you need me.');
+    }
+
+    function restart() {
+      stopCamera();
+      setTimeout(() => startCamera(), 500);
+    }
+
+    // ─── Event Listeners ───
+    $('btn-screenshot').addEventListener('click', screenshot);
+    $('btn-voice').addEventListener('click', toggleVoice);
+    $('btn-mute').addEventListener('click', toggleMute);
+    $('btn-stop').addEventListener('click', stopCamera);
+
+    document.addEventListener('keydown', e => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.code === 'Space') { e.preventDefault(); screenshot(); }
+      if (e.code === 'KeyM') toggleMute();
+      if (e.code === 'KeyV') toggleVoice();
+      if (e.code === 'KeyS') stopCamera();
+      if (e.code === 'KeyR') restart();
+    });
+
+    window.addEventListener('beforeunload', () => {
+      if (state.stream) state.stream.getTracks().forEach(t => t.stop());
+      if (state.recognition) state.recognition.stop();
+    });
+
+    window.addEventListener('resize', () => {
+      if (video.videoWidth) {
+        mainCanvas.width = video.videoWidth;
+        mainCanvas.height = video.videoHeight;
+        hudCanvas.width = video.videoWidth;
+        hudCanvas.height = video.videoHeight;
+      }
+    });
+
+    // ─── Boot ───
+    (async function boot() {
+      await loadModel();
+      await startCamera();
+    })();
+
+  })();
+</script>
+</body>
+</html>
