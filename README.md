@@ -1,61 +1,223 @@
-# 🎯 Real-Time Object Detection System
+# Video Understanding Agent
 
-> YOLOv8 · TensorRT · FastAPI · Docker | **Status: 🚧 In Progress**
+An experimental multimodal AI system for understanding video streams through object detection, tracking, memory, and natural language reasoning.
 
----
+The goal of this project is to move beyond frame-by-frame object detection and build a system capable of answering questions about events occurring in videos.
 
-## What I'm Building
+Examples:
 
-A production-ready real-time object detection pipeline trained on a custom 12K image dataset.
-Not just a model — a full system: data → training → optimization → API serving → monitoring.
-
----
-
-## 🎯 Targets
-
-| Metric | Goal |
-|--------|------|
-| mAP | 90%+ |
-| Inference Speed | 45 FPS |
-| API Latency | < 80ms |
-| Optimization | TensorRT INT8 |
+* "Who entered first?"
+* "How many people crossed the doorway?"
+* "When did the red car appear?"
+* "Describe what happened during the last minute."
+* "Find moments containing laptops."
 
 ---
 
-## 🛠️ Stack
+## Overview
 
-`PyTorch` `YOLOv8` `TensorRT` `ONNX` `OpenCV` `FastAPI` `Docker` `MLflow`
+The project combines computer vision, vector retrieval, and language models to transform video streams into structured memories that can be queried using natural language.
 
----
+Planned pipeline:
 
-## 📦 Pipeline
-
-Raw Data → Preprocessing → YOLOv8 Training → TensorRT Export → FastAPI → Frontend
-
----
-
-## 🔗 Live Demo
-
-> Basic webcam demo running in browser (COCO-SSD — pretrained)
-> Custom YOLOv8 model will replace this once training is complete
-
-**[▶ Try Demo](https://anishk-neuroforge.github.io/real-time-object-detection/demo_object_detection.html)**
-
----
-
-## 📍 Progress
-
-- [x] Demo pipeline (browser-based COCO-SSD)
-- [x] Dataset collected (12K images)
-- [ ] YOLOv8 custom training
-- [ ] TensorRT optimization
-- [ ] FastAPI serving
-- [ ] Docker deployment
-- [ ] MLflow experiment tracking
+```text
+Video
+↓
+Object Detection
+↓
+Multi-Object Tracking
+↓
+Event Extraction
+↓
+Scene Understanding
+↓
+Memory
+↓
+Retrieval
+↓
+LLM Reasoning
+↓
+Natural Language Answers
+```
 
 ---
 
-## 👤 Author
+## Architecture
 
-**Anish Kumar** — ML Engineer (BTech AI/ML)
-[GitHub](https://github.com/anishk-neuroforge) · [LinkedIn](https://linkedin.com/in/anishkumar25) · [Portfolio](https://anishk-neuroforge.github.io)
+```text
+Video
+↓
+YOLO
+↓
+ByteTrack
+↓
+Event Builder
+↓
+Scene Captioning
+↓
+Vector Embeddings
+↓
+Memory Store
+↓
+Retrieval Layer
+↓
+Language Model
+↓
+Question Answering
+```
+
+---
+
+## Features
+
+### Current
+
+* Repository setup
+* System design and architecture planning
+
+### Planned
+
+* Real-time object detection
+* Multi-object tracking
+* Event extraction
+* Scene captioning
+* Vector-based memory
+* Semantic search
+* Natural language querying
+* Temporal reasoning
+* Video summarization
+
+---
+
+## Tech Stack
+
+### Computer Vision
+
+* YOLO
+* ByteTrack
+
+### Vision-Language Models
+
+* Qwen2.5-VL
+
+### Embeddings
+
+* SigLIP / CLIP
+
+### Vector Database
+
+* ChromaDB
+
+### Language Models
+
+* Llama 3
+* Gemma
+* Qwen
+
+### Backend
+
+* FastAPI
+
+### Storage
+
+* SQLite
+
+---
+
+## Repository Structure
+
+```text
+video-understanding-agent/
+
+vision/
+    detector.py
+    tracker.py
+    captioner.py
+
+memory/
+    event_builder.py
+    vector_store.py
+
+database/
+
+agent/
+    tools.py
+    reasoner.py
+
+backend/
+    app.py
+
+frontend/
+
+tests/
+```
+
+---
+
+## Development Roadmap
+
+### Phase 1
+
+* [ ] Object detection
+
+### Phase 2
+
+* [ ] Multi-object tracking
+
+### Phase 3
+
+* [ ] Event extraction
+
+### Phase 4
+
+* [ ] Region-based reasoning
+
+### Phase 5
+
+* [ ] Scene captioning
+
+### Phase 6
+
+* [ ] Vector memory
+
+### Phase 7
+
+* [ ] Retrieval layer
+
+### Phase 8
+
+* [ ] Natural language question answering
+
+### Phase 9
+
+* [ ] Temporal reasoning
+
+### Phase 10
+
+* [ ] Anomaly detection
+
+---
+
+## Motivation
+
+Most object detection systems answer:
+
+> "What objects are present?"
+
+This project aims to answer:
+
+> "What happened?"
+
+---
+
+## Status
+
+Early-stage project under active development.
+
+No benchmark results or performance metrics are reported yet. Metrics and evaluations will be added as features are implemented and tested.
+
+---
+
+## License
+
+MIT
