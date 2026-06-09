@@ -1,0 +1,5151 @@
+[
+  {
+    "event_type": "entered_scene",
+    "timestamp": 0.125,
+    "track_id": 1,
+    "class_name": "person",
+    "position": [
+      906.1525268554688,
+      543.2561187744141
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:00.12"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 0.125,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      1003.3530883789062,
+      529.3028259277344
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:00.12"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 0.125,
+    "track_id": 3,
+    "class_name": "person",
+    "position": [
+      840.0536499023438,
+      530.5099029541016
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:00.12"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 0.125,
+    "track_id": 4,
+    "class_name": "person",
+    "position": [
+      788.524658203125,
+      582.9817047119141
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:00.12"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 0.125,
+    "track_id": 5,
+    "class_name": "person",
+    "position": [
+      406.0287170410156,
+      302.1568145751953
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:00.12"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 0.125,
+    "track_id": 6,
+    "class_name": "person",
+    "position": [
+      529.4398498535156,
+      366.5166931152344
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:00.12"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 0.125,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      376.9496154785156,
+      301.6594543457031
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:00.12"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 0.417,
+    "track_id": 3,
+    "class_name": "person",
+    "position": [
+      830.0586547851562,
+      494.7828674316406
+    ],
+    "meta": {
+      "speed_px_s": 181.0
+    },
+    "timestamp_fmt": "00:00.42"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 0.751,
+    "track_id": 9,
+    "class_name": "person",
+    "position": [
+      548.8839111328125,
+      360.80213928222656
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:00.75"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 1.085,
+    "track_id": 11,
+    "class_name": "person",
+    "position": [
+      129.80525970458984,
+      294.71559143066406
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:01.08"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 1.085,
+    "track_id": 11,
+    "class_name": "person",
+    "position": [
+      129.80525970458984,
+      294.71559143066406
+    ],
+    "meta": {
+      "duration_s": 0.13
+    },
+    "timestamp_fmt": "00:01.08"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 1.293,
+    "track_id": 6,
+    "class_name": "person",
+    "position": [
+      510.42010498046875,
+      356.4889831542969
+    ],
+    "meta": {
+      "duration_s": 1.29
+    },
+    "timestamp_fmt": "00:01.29"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 1.377,
+    "track_id": 6,
+    "class_name": "person",
+    "position": [
+      509.3398742675781,
+      356.63230895996094
+    ],
+    "meta": {
+      "duration_s": 1.38
+    },
+    "timestamp_fmt": "00:01.38"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 1.377,
+    "track_id": 9,
+    "class_name": "person",
+    "position": [
+      540.7621154785156,
+      356.97901916503906
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:01.38"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 1.669,
+    "track_id": 6,
+    "class_name": "person",
+    "position": [
+      505.8966369628906,
+      357.34991455078125
+    ],
+    "meta": {
+      "duration_s": 1.67
+    },
+    "timestamp_fmt": "00:01.67"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 1.877,
+    "track_id": 6,
+    "class_name": "person",
+    "position": [
+      502.41693115234375,
+      340.00209045410156
+    ],
+    "meta": {
+      "duration_s": 1.88
+    },
+    "timestamp_fmt": "00:01.88"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 2.003,
+    "track_id": 6,
+    "class_name": "person",
+    "position": [
+      500.9311065673828,
+      336.012939453125
+    ],
+    "meta": {
+      "duration_s": 2.0
+    },
+    "timestamp_fmt": "00:02.00"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 2.086,
+    "track_id": 15,
+    "class_name": "person",
+    "position": [
+      257.6052551269531,
+      294.9989471435547
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:02.09"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 2.837,
+    "track_id": 4,
+    "class_name": "person",
+    "position": [
+      1168.1914672851562,
+      677.6171569824219
+    ],
+    "meta": {
+      "speed_px_s": 186.4
+    },
+    "timestamp_fmt": "00:02.84"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.087,
+    "track_id": 15,
+    "class_name": "person",
+    "position": [
+      364.4397430419922,
+      296.60845947265625
+    ],
+    "meta": {
+      "duration_s": 1.13
+    },
+    "timestamp_fmt": "00:03.09"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.254,
+    "track_id": 4,
+    "class_name": "person",
+    "position": [
+      1242.2256469726562,
+      684.8525695800781
+    ],
+    "meta": {
+      "duration_s": 3.25
+    },
+    "timestamp_fmt": "00:03.25"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.296,
+    "track_id": 6,
+    "class_name": "person",
+    "position": [
+      483.49072265625,
+      334.49305725097656
+    ],
+    "meta": {
+      "duration_s": 3.3
+    },
+    "timestamp_fmt": "00:03.30"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.463,
+    "track_id": 6,
+    "class_name": "person",
+    "position": [
+      480.9923553466797,
+      335.0194854736328
+    ],
+    "meta": {
+      "duration_s": 3.46
+    },
+    "timestamp_fmt": "00:03.46"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 5.674,
+    "track_id": 6,
+    "class_name": "person",
+    "position": [
+      466.6523742675781,
+      330.237548828125
+    ],
+    "meta": {
+      "duration_s": 5.67
+    },
+    "timestamp_fmt": "00:05.67"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 6.341,
+    "track_id": 6,
+    "class_name": "person",
+    "position": [
+      458.0222625732422,
+      328.56207275390625
+    ],
+    "meta": {
+      "duration_s": 6.34
+    },
+    "timestamp_fmt": "00:06.34"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 6.466,
+    "track_id": 9,
+    "class_name": "person",
+    "position": [
+      478.9030303955078,
+      321.9234924316406
+    ],
+    "meta": {
+      "duration_s": 5.84
+    },
+    "timestamp_fmt": "00:06.47"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 6.717,
+    "track_id": 5,
+    "class_name": "person",
+    "position": [
+      440.66387939453125,
+      330.35675048828125
+    ],
+    "meta": {
+      "duration_s": 6.72
+    },
+    "timestamp_fmt": "00:06.72"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 6.717,
+    "track_id": 9,
+    "class_name": "person",
+    "position": [
+      474.3534851074219,
+      323.20408630371094
+    ],
+    "meta": {
+      "duration_s": 6.09
+    },
+    "timestamp_fmt": "00:06.72"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 6.967,
+    "track_id": 9,
+    "class_name": "person",
+    "position": [
+      468.2969665527344,
+      321.02098083496094
+    ],
+    "meta": {
+      "duration_s": 6.34
+    },
+    "timestamp_fmt": "00:06.97"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 7.092,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      402.4669647216797,
+      336.04209899902344
+    ],
+    "meta": {
+      "duration_s": 7.09
+    },
+    "timestamp_fmt": "00:07.09"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 7.176,
+    "track_id": 5,
+    "class_name": "person",
+    "position": [
+      443.1063232421875,
+      325.1748809814453
+    ],
+    "meta": {
+      "duration_s": 7.18
+    },
+    "timestamp_fmt": "00:07.18"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 7.176,
+    "track_id": 9,
+    "class_name": "person",
+    "position": [
+      465.84075927734375,
+      321.75511169433594
+    ],
+    "meta": {
+      "duration_s": 6.55
+    },
+    "timestamp_fmt": "00:07.18"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 7.343,
+    "track_id": 9,
+    "class_name": "person",
+    "position": [
+      465.20062255859375,
+      321.8756561279297
+    ],
+    "meta": {
+      "duration_s": 6.72
+    },
+    "timestamp_fmt": "00:07.34"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 7.593,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      408.9521179199219,
+      335.5922088623047
+    ],
+    "meta": {
+      "duration_s": 7.59
+    },
+    "timestamp_fmt": "00:07.59"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 7.885,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      426.51100158691406,
+      319.8654479980469
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:07.88"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 8.01,
+    "track_id": 5,
+    "class_name": "person",
+    "position": [
+      454.40370178222656,
+      331.95948791503906
+    ],
+    "meta": {
+      "duration_s": 8.01,
+      "displacement_px": 57.7
+    },
+    "timestamp_fmt": "00:08.01"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 8.052,
+    "track_id": 5,
+    "class_name": "person",
+    "position": [
+      454.57765197753906,
+      333.1600646972656
+    ],
+    "meta": {
+      "duration_s": 8.05
+    },
+    "timestamp_fmt": "00:08.05"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 8.135,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      416.1506042480469,
+      324.26849365234375
+    ],
+    "meta": {
+      "duration_s": 8.14,
+      "displacement_px": 44.7
+    },
+    "timestamp_fmt": "00:08.13"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 8.093,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      420.9847717285156,
+      316.3345947265625
+    ],
+    "meta": {
+      "duration_s": 0.33
+    },
+    "timestamp_fmt": "00:08.09"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 8.177,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      416.3771057128906,
+      323.8443908691406
+    ],
+    "meta": {
+      "duration_s": 8.18
+    },
+    "timestamp_fmt": "00:08.18"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 8.219,
+    "track_id": 5,
+    "class_name": "person",
+    "position": [
+      454.40203857421875,
+      336.0738067626953
+    ],
+    "meta": {
+      "duration_s": 8.22
+    },
+    "timestamp_fmt": "00:08.22"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 8.427,
+    "track_id": 3,
+    "class_name": "person",
+    "position": [
+      580.8171081542969,
+      401.2295684814453
+    ],
+    "meta": {
+      "duration_s": 8.43
+    },
+    "timestamp_fmt": "00:08.43"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 9.136,
+    "track_id": 18,
+    "class_name": "person",
+    "position": [
+      467.1358642578125,
+      337.5923767089844
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:09.14"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 9.136,
+    "track_id": 19,
+    "class_name": "person",
+    "position": [
+      548.0319213867188,
+      391.50535583496094
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:09.14"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 9.554,
+    "track_id": 19,
+    "class_name": "person",
+    "position": [
+      546.6356811523438,
+      388.2587890625
+    ],
+    "meta": {
+      "angle_deg": 149.0
+    },
+    "timestamp_fmt": "00:09.55"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 9.554,
+    "track_id": 18,
+    "class_name": "person",
+    "position": [
+      473.5974884033203,
+      337.83546447753906
+    ],
+    "meta": {
+      "duration_s": 0.54
+    },
+    "timestamp_fmt": "00:09.55"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 9.971,
+    "track_id": 20,
+    "class_name": "person",
+    "position": [
+      483.5442810058594,
+      377.5299987792969
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:09.97"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 9.971,
+    "track_id": 20,
+    "class_name": "person",
+    "position": [
+      483.5442810058594,
+      377.5299987792969
+    ],
+    "meta": {
+      "duration_s": 0.13
+    },
+    "timestamp_fmt": "00:09.97"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.346,
+    "track_id": 20,
+    "class_name": "person",
+    "position": [
+      499.50563049316406,
+      381.6290740966797
+    ],
+    "meta": {
+      "duration_s": 0.5
+    },
+    "timestamp_fmt": "00:10.35"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.513,
+    "track_id": 20,
+    "class_name": "person",
+    "position": [
+      507.8650665283203,
+      385.75543212890625
+    ],
+    "meta": {
+      "duration_s": 0.67
+    },
+    "timestamp_fmt": "00:10.51"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.597,
+    "track_id": 20,
+    "class_name": "person",
+    "position": [
+      510.3841552734375,
+      389.8069610595703
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:10.60"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.68,
+    "track_id": 19,
+    "class_name": "person",
+    "position": [
+      536.1484375,
+      375.90928649902344
+    ],
+    "meta": {
+      "duration_s": 1.67
+    },
+    "timestamp_fmt": "00:10.68"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.763,
+    "track_id": 1,
+    "class_name": "person",
+    "position": [
+      580.4859619140625,
+      385.17662048339844
+    ],
+    "meta": {
+      "duration_s": 10.76
+    },
+    "timestamp_fmt": "00:10.76"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 11.014,
+    "track_id": 20,
+    "class_name": "person",
+    "position": [
+      529.7496795654297,
+      396.6978454589844
+    ],
+    "meta": {
+      "duration_s": 1.17
+    },
+    "timestamp_fmt": "00:11.01"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 11.306,
+    "track_id": 23,
+    "class_name": "person",
+    "position": [
+      517.3153686523438,
+      365.93653869628906
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:11.31"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 11.306,
+    "track_id": 20,
+    "class_name": "person",
+    "position": [
+      541.6607971191406,
+      396.5607604980469
+    ],
+    "meta": {
+      "duration_s": 1.46
+    },
+    "timestamp_fmt": "00:11.31"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 11.723,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      604.8058166503906,
+      365.3496398925781
+    ],
+    "meta": {
+      "duration_s": 11.72
+    },
+    "timestamp_fmt": "00:11.72"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 11.932,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      608.8179626464844,
+      415.3432159423828
+    ],
+    "meta": {
+      "speed_px_s": 240.4
+    },
+    "timestamp_fmt": "00:11.93"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 11.89,
+    "track_id": 23,
+    "class_name": "person",
+    "position": [
+      503.95867919921875,
+      362.5494079589844
+    ],
+    "meta": {
+      "duration_s": 0.71
+    },
+    "timestamp_fmt": "00:11.89"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 12.057,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      597.64208984375,
+      397.037109375
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:12.06"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 12.14,
+    "track_id": 27,
+    "class_name": "person",
+    "position": [
+      544.7769775390625,
+      373.02613830566406
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:12.14"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 12.307,
+    "track_id": 23,
+    "class_name": "person",
+    "position": [
+      494.33982849121094,
+      356.0986328125
+    ],
+    "meta": {
+      "duration_s": 1.13
+    },
+    "timestamp_fmt": "00:12.31"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 12.432,
+    "track_id": 29,
+    "class_name": "person",
+    "position": [
+      591.7541809082031,
+      361.39781188964844
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:12.43"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 12.724,
+    "track_id": 28,
+    "class_name": "person",
+    "position": [
+      489.04144287109375,
+      337.5564422607422
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:12.72"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 12.724,
+    "track_id": 23,
+    "class_name": "person",
+    "position": [
+      490.8443298339844,
+      360.89320373535156
+    ],
+    "meta": {
+      "duration_s": 1.54
+    },
+    "timestamp_fmt": "00:12.72"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 12.849,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      709.5678405761719,
+      433.8294982910156
+    ],
+    "meta": {
+      "duration_s": 12.85
+    },
+    "timestamp_fmt": "00:12.85"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 12.933,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      725.238037109375,
+      432.55889892578125
+    ],
+    "meta": {
+      "angle_deg": 143.0
+    },
+    "timestamp_fmt": "00:12.93"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 13.183,
+    "track_id": 28,
+    "class_name": "person",
+    "position": [
+      482.99708557128906,
+      336.7663879394531
+    ],
+    "meta": {
+      "duration_s": 0.92
+    },
+    "timestamp_fmt": "00:13.18"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 13.183,
+    "track_id": 29,
+    "class_name": "person",
+    "position": [
+      578.5190734863281,
+      360.5106964111328
+    ],
+    "meta": {
+      "duration_s": 0.88
+    },
+    "timestamp_fmt": "00:13.18"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 14.018,
+    "track_id": 30,
+    "class_name": "person",
+    "position": [
+      547.2141418457031,
+      353.4747009277344
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:14.02"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 14.101,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      866.9552001953125,
+      449.52198791503906
+    ],
+    "meta": {
+      "duration_s": 14.1,
+      "displacement_px": 59.6
+    },
+    "timestamp_fmt": "00:14.10"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.226,
+    "track_id": 28,
+    "class_name": "person",
+    "position": [
+      469.84349060058594,
+      335.4027557373047
+    ],
+    "meta": {
+      "duration_s": 1.96
+    },
+    "timestamp_fmt": "00:14.23"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.351,
+    "track_id": 27,
+    "class_name": "person",
+    "position": [
+      507.68666076660156,
+      354.4159240722656
+    ],
+    "meta": {
+      "duration_s": 2.34
+    },
+    "timestamp_fmt": "00:14.35"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.435,
+    "track_id": 28,
+    "class_name": "person",
+    "position": [
+      466.0448303222656,
+      333.7484436035156
+    ],
+    "meta": {
+      "duration_s": 2.17
+    },
+    "timestamp_fmt": "00:14.44"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.518,
+    "track_id": 27,
+    "class_name": "person",
+    "position": [
+      504.0038604736328,
+      352.25743103027344
+    ],
+    "meta": {
+      "duration_s": 2.5
+    },
+    "timestamp_fmt": "00:14.52"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.685,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      386.4062957763672,
+      297.931640625
+    ],
+    "meta": {
+      "duration_s": 6.93
+    },
+    "timestamp_fmt": "00:14.69"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 14.768,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      404.423095703125,
+      294.33412170410156
+    ],
+    "meta": {
+      "angle_deg": 142.4
+    },
+    "timestamp_fmt": "00:14.77"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 14.852,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      922.6885986328125,
+      432.5611572265625
+    ],
+    "meta": {
+      "speed_px_s": 192.8
+    },
+    "timestamp_fmt": "00:14.85"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.894,
+    "track_id": 27,
+    "class_name": "person",
+    "position": [
+      501.9901428222656,
+      338.29095458984375
+    ],
+    "meta": {
+      "duration_s": 2.88
+    },
+    "timestamp_fmt": "00:14.89"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 15.186,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      1020.6197509765625,
+      461.6517791748047
+    ],
+    "meta": {
+      "duration_s": 15.19
+    },
+    "timestamp_fmt": "00:15.19"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 15.186,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      964.5018615722656,
+      438.0545349121094
+    ],
+    "meta": {
+      "duration_s": 3.25
+    },
+    "timestamp_fmt": "00:15.19"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 15.269,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      994.4784545898438,
+      438.9642028808594
+    ],
+    "meta": {
+      "speed_px_s": 218.5
+    },
+    "timestamp_fmt": "00:15.27"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 15.269,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      1039.4808654785156,
+      457.22023010253906
+    ],
+    "meta": {
+      "duration_s": 15.27
+    },
+    "timestamp_fmt": "00:15.27"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 15.394,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      1017.8166198730469,
+      434.2823486328125
+    ],
+    "meta": {
+      "duration_s": 3.46
+    },
+    "timestamp_fmt": "00:15.39"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 15.686,
+    "track_id": 32,
+    "class_name": "person",
+    "position": [
+      167.59619903564453,
+      270.38360595703125
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:15.69"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 15.686,
+    "track_id": 32,
+    "class_name": "person",
+    "position": [
+      167.59619903564453,
+      270.38360595703125
+    ],
+    "meta": {
+      "duration_s": 0.13
+    },
+    "timestamp_fmt": "00:15.69"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 15.77,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      380.85057067871094,
+      291.28330993652344
+    ],
+    "meta": {
+      "duration_s": 8.01,
+      "displacement_px": 55.6
+    },
+    "timestamp_fmt": "00:15.77"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 15.895,
+    "track_id": 32,
+    "class_name": "person",
+    "position": [
+      162.89602661132812,
+      270.39904022216797
+    ],
+    "meta": {
+      "duration_s": 0.33
+    },
+    "timestamp_fmt": "00:15.89"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 16.02,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      400.0964813232422,
+      287.3328857421875
+    ],
+    "meta": {
+      "duration_s": 16.02
+    },
+    "timestamp_fmt": "00:16.02"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 16.312,
+    "track_id": 32,
+    "class_name": "person",
+    "position": [
+      152.31651306152344,
+      274.8048858642578
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:16.31"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 16.813,
+    "track_id": 32,
+    "class_name": "person",
+    "position": [
+      142.60790252685547,
+      272.19898986816406
+    ],
+    "meta": {
+      "duration_s": 1.25
+    },
+    "timestamp_fmt": "00:16.81"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 16.98,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      393.5503845214844,
+      284.7213897705078
+    ],
+    "meta": {
+      "duration_s": 16.98
+    },
+    "timestamp_fmt": "00:16.98"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 17.021,
+    "track_id": 32,
+    "class_name": "person",
+    "position": [
+      137.61278533935547,
+      272.796875
+    ],
+    "meta": {
+      "duration_s": 1.46
+    },
+    "timestamp_fmt": "00:17.02"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 17.397,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      372.5460205078125,
+      286.2130584716797
+    ],
+    "meta": {
+      "duration_s": 9.64
+    },
+    "timestamp_fmt": "00:17.40"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 17.397,
+    "track_id": 32,
+    "class_name": "person",
+    "position": [
+      125.88433074951172,
+      279.8368225097656
+    ],
+    "meta": {
+      "duration_s": 1.84
+    },
+    "timestamp_fmt": "00:17.40"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 17.48,
+    "track_id": 36,
+    "class_name": "person",
+    "position": [
+      455.67169189453125,
+      330.2777557373047
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:17.48"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 17.689,
+    "track_id": 32,
+    "class_name": "person",
+    "position": [
+      128.4935417175293,
+      279.8312225341797
+    ],
+    "meta": {
+      "duration_s": 2.13
+    },
+    "timestamp_fmt": "00:17.69"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 17.814,
+    "track_id": 36,
+    "class_name": "person",
+    "position": [
+      455.05364990234375,
+      329.2797393798828
+    ],
+    "meta": {
+      "duration_s": 0.46
+    },
+    "timestamp_fmt": "00:17.81"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 17.897,
+    "track_id": 39,
+    "class_name": "person",
+    "position": [
+      116.82122421264648,
+      274.3651123046875
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:17.90"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 17.939,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      365.46739196777344,
+      283.87745666503906
+    ],
+    "meta": {
+      "duration_s": 10.18
+    },
+    "timestamp_fmt": "00:17.94"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 18.023,
+    "track_id": 38,
+    "class_name": "person",
+    "position": [
+      218.85558319091797,
+      265.5446472167969
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:18.02"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.023,
+    "track_id": 38,
+    "class_name": "person",
+    "position": [
+      218.85558319091797,
+      265.5446472167969
+    ],
+    "meta": {
+      "duration_s": 0.33
+    },
+    "timestamp_fmt": "00:18.02"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 18.106,
+    "track_id": 41,
+    "class_name": "person",
+    "position": [
+      150.34745025634766,
+      288.8656005859375
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:18.11"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.231,
+    "track_id": 39,
+    "class_name": "person",
+    "position": [
+      108.38899612426758,
+      283.3477783203125
+    ],
+    "meta": {
+      "duration_s": 0.46
+    },
+    "timestamp_fmt": "00:18.23"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.273,
+    "track_id": 38,
+    "class_name": "person",
+    "position": [
+      212.00184631347656,
+      267.2932662963867
+    ],
+    "meta": {
+      "duration_s": 0.58
+    },
+    "timestamp_fmt": "00:18.27"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.356,
+    "track_id": 41,
+    "class_name": "person",
+    "position": [
+      158.00162506103516,
+      288.04364013671875
+    ],
+    "meta": {
+      "duration_s": 0.38
+    },
+    "timestamp_fmt": "00:18.36"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.69,
+    "track_id": 38,
+    "class_name": "person",
+    "position": [
+      205.33728790283203,
+      267.0754699707031
+    ],
+    "meta": {
+      "duration_s": 1.0
+    },
+    "timestamp_fmt": "00:18.69"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.732,
+    "track_id": 41,
+    "class_name": "person",
+    "position": [
+      167.95082092285156,
+      284.47560119628906
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:18.73"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.94,
+    "track_id": 41,
+    "class_name": "person",
+    "position": [
+      173.72802734375,
+      289.6481628417969
+    ],
+    "meta": {
+      "duration_s": 0.96
+    },
+    "timestamp_fmt": "00:18.94"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 19.274,
+    "track_id": 41,
+    "class_name": "person",
+    "position": [
+      181.2191925048828,
+      288.30238342285156
+    ],
+    "meta": {
+      "duration_s": 1.29
+    },
+    "timestamp_fmt": "00:19.27"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 19.691,
+    "track_id": 41,
+    "class_name": "person",
+    "position": [
+      189.58987426757812,
+      277.70218658447266
+    ],
+    "meta": {
+      "duration_s": 1.71
+    },
+    "timestamp_fmt": "00:19.69"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 19.9,
+    "track_id": 42,
+    "class_name": "person",
+    "position": [
+      232.0343475341797,
+      252.02003479003906
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:19.90"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 19.9,
+    "track_id": 42,
+    "class_name": "person",
+    "position": [
+      232.0343475341797,
+      252.02003479003906
+    ],
+    "meta": {
+      "duration_s": 0.13
+    },
+    "timestamp_fmt": "00:19.90"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 20.108,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      358.14268493652344,
+      280.7375030517578
+    ],
+    "meta": {
+      "duration_s": 12.35
+    },
+    "timestamp_fmt": "00:20.11"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 20.943,
+    "track_id": 44,
+    "class_name": "person",
+    "position": [
+      162.76541900634766,
+      268.9668960571289
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:20.94"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 20.985,
+    "track_id": 44,
+    "class_name": "person",
+    "position": [
+      161.99170684814453,
+      269.94322204589844
+    ],
+    "meta": {
+      "duration_s": 0.38
+    },
+    "timestamp_fmt": "00:20.98"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 21.193,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      346.22242736816406,
+      278.2295913696289
+    ],
+    "meta": {
+      "duration_s": 13.43
+    },
+    "timestamp_fmt": "00:21.19"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 21.277,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      345.7038269042969,
+      277.4643325805664
+    ],
+    "meta": {
+      "duration_s": 13.52
+    },
+    "timestamp_fmt": "00:21.28"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 21.36,
+    "track_id": 44,
+    "class_name": "person",
+    "position": [
+      154.4077606201172,
+      271.99918365478516
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:21.36"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 21.443,
+    "track_id": 44,
+    "class_name": "person",
+    "position": [
+      151.06285858154297,
+      271.71956634521484
+    ],
+    "meta": {
+      "duration_s": 0.83
+    },
+    "timestamp_fmt": "00:21.44"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 21.736,
+    "track_id": 44,
+    "class_name": "person",
+    "position": [
+      145.55261993408203,
+      273.15064239501953
+    ],
+    "meta": {
+      "duration_s": 1.13
+    },
+    "timestamp_fmt": "00:21.74"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 22.361,
+    "track_id": 44,
+    "class_name": "person",
+    "position": [
+      131.84148406982422,
+      273.20389556884766
+    ],
+    "meta": {
+      "duration_s": 1.75
+    },
+    "timestamp_fmt": "00:22.36"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 22.57,
+    "track_id": 44,
+    "class_name": "person",
+    "position": [
+      125.7036361694336,
+      273.67134857177734
+    ],
+    "meta": {
+      "duration_s": 1.96
+    },
+    "timestamp_fmt": "00:22.57"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 22.737,
+    "track_id": 44,
+    "class_name": "person",
+    "position": [
+      122.35175323486328,
+      274.4997024536133
+    ],
+    "meta": {
+      "duration_s": 2.13
+    },
+    "timestamp_fmt": "00:22.74"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 22.987,
+    "track_id": 47,
+    "class_name": "person",
+    "position": [
+      343.5227813720703,
+      272.25609588623047
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:22.99"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 23.279,
+    "track_id": 47,
+    "class_name": "person",
+    "position": [
+      348.90354919433594,
+      271.4010314941406
+    ],
+    "meta": {
+      "duration_s": 0.42
+    },
+    "timestamp_fmt": "00:23.28"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 23.404,
+    "track_id": 44,
+    "class_name": "person",
+    "position": [
+      107.31947708129883,
+      281.8953323364258
+    ],
+    "meta": {
+      "duration_s": 2.8
+    },
+    "timestamp_fmt": "00:23.40"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 23.613,
+    "track_id": 48,
+    "class_name": "person",
+    "position": [
+      329.15879821777344,
+      272.2805480957031
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:23.61"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 24.239,
+    "track_id": 48,
+    "class_name": "person",
+    "position": [
+      323.559326171875,
+      270.8919677734375
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:24.24"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 1.293,
+    "track_id": 6,
+    "class_name": "person",
+    "position": [
+      510.42010498046875,
+      356.4889831542969
+    ],
+    "meta": {
+      "duration_s": 1.29
+    },
+    "timestamp_fmt": "00:01.29"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 1.377,
+    "track_id": 9,
+    "class_name": "person",
+    "position": [
+      540.7621154785156,
+      356.97901916503906
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:01.38"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 2.837,
+    "track_id": 4,
+    "class_name": "person",
+    "position": [
+      1168.1914672851562,
+      677.6171569824219
+    ],
+    "meta": {
+      "speed_px_s": 186.4
+    },
+    "timestamp_fmt": "00:02.84"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.087,
+    "track_id": 15,
+    "class_name": "person",
+    "position": [
+      364.4397430419922,
+      296.60845947265625
+    ],
+    "meta": {
+      "duration_s": 1.13
+    },
+    "timestamp_fmt": "00:03.09"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.254,
+    "track_id": 4,
+    "class_name": "person",
+    "position": [
+      1242.2256469726562,
+      684.8525695800781
+    ],
+    "meta": {
+      "duration_s": 3.25
+    },
+    "timestamp_fmt": "00:03.25"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 6.717,
+    "track_id": 5,
+    "class_name": "person",
+    "position": [
+      440.66387939453125,
+      330.35675048828125
+    ],
+    "meta": {
+      "duration_s": 6.72
+    },
+    "timestamp_fmt": "00:06.72"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 7.092,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      402.4669647216797,
+      336.04209899902344
+    ],
+    "meta": {
+      "duration_s": 7.09
+    },
+    "timestamp_fmt": "00:07.09"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 8.01,
+    "track_id": 5,
+    "class_name": "person",
+    "position": [
+      454.40370178222656,
+      331.95948791503906
+    ],
+    "meta": {
+      "duration_s": 8.01,
+      "displacement_px": 57.7
+    },
+    "timestamp_fmt": "00:08.01"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 8.135,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      416.1506042480469,
+      324.26849365234375
+    ],
+    "meta": {
+      "duration_s": 8.14,
+      "displacement_px": 44.7
+    },
+    "timestamp_fmt": "00:08.13"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 8.427,
+    "track_id": 3,
+    "class_name": "person",
+    "position": [
+      580.8171081542969,
+      401.2295684814453
+    ],
+    "meta": {
+      "duration_s": 8.43
+    },
+    "timestamp_fmt": "00:08.43"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 9.554,
+    "track_id": 19,
+    "class_name": "person",
+    "position": [
+      546.6356811523438,
+      388.2587890625
+    ],
+    "meta": {
+      "angle_deg": 149.0
+    },
+    "timestamp_fmt": "00:09.55"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 9.554,
+    "track_id": 18,
+    "class_name": "person",
+    "position": [
+      473.5974884033203,
+      337.83546447753906
+    ],
+    "meta": {
+      "duration_s": 0.54
+    },
+    "timestamp_fmt": "00:09.55"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.346,
+    "track_id": 20,
+    "class_name": "person",
+    "position": [
+      499.50563049316406,
+      381.6290740966797
+    ],
+    "meta": {
+      "duration_s": 0.5
+    },
+    "timestamp_fmt": "00:10.35"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.68,
+    "track_id": 19,
+    "class_name": "person",
+    "position": [
+      536.1484375,
+      375.90928649902344
+    ],
+    "meta": {
+      "duration_s": 1.67
+    },
+    "timestamp_fmt": "00:10.68"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.763,
+    "track_id": 1,
+    "class_name": "person",
+    "position": [
+      580.4859619140625,
+      385.17662048339844
+    ],
+    "meta": {
+      "duration_s": 10.76
+    },
+    "timestamp_fmt": "00:10.76"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 11.723,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      604.8058166503906,
+      365.3496398925781
+    ],
+    "meta": {
+      "duration_s": 11.72
+    },
+    "timestamp_fmt": "00:11.72"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 11.932,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      608.8179626464844,
+      415.3432159423828
+    ],
+    "meta": {
+      "speed_px_s": 240.4
+    },
+    "timestamp_fmt": "00:11.93"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 11.89,
+    "track_id": 23,
+    "class_name": "person",
+    "position": [
+      503.95867919921875,
+      362.5494079589844
+    ],
+    "meta": {
+      "duration_s": 0.71
+    },
+    "timestamp_fmt": "00:11.89"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 12.933,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      725.238037109375,
+      432.55889892578125
+    ],
+    "meta": {
+      "angle_deg": 143.0
+    },
+    "timestamp_fmt": "00:12.93"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 13.183,
+    "track_id": 28,
+    "class_name": "person",
+    "position": [
+      482.99708557128906,
+      336.7663879394531
+    ],
+    "meta": {
+      "duration_s": 0.92
+    },
+    "timestamp_fmt": "00:13.18"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 13.183,
+    "track_id": 29,
+    "class_name": "person",
+    "position": [
+      578.5190734863281,
+      360.5106964111328
+    ],
+    "meta": {
+      "duration_s": 0.88
+    },
+    "timestamp_fmt": "00:13.18"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 14.101,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      866.9552001953125,
+      449.52198791503906
+    ],
+    "meta": {
+      "duration_s": 14.1,
+      "displacement_px": 59.6
+    },
+    "timestamp_fmt": "00:14.10"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.351,
+    "track_id": 27,
+    "class_name": "person",
+    "position": [
+      507.68666076660156,
+      354.4159240722656
+    ],
+    "meta": {
+      "duration_s": 2.34
+    },
+    "timestamp_fmt": "00:14.35"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.685,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      386.4062957763672,
+      297.931640625
+    ],
+    "meta": {
+      "duration_s": 6.93
+    },
+    "timestamp_fmt": "00:14.69"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 14.768,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      404.423095703125,
+      294.33412170410156
+    ],
+    "meta": {
+      "angle_deg": 142.4
+    },
+    "timestamp_fmt": "00:14.77"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 14.852,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      922.6885986328125,
+      432.5611572265625
+    ],
+    "meta": {
+      "speed_px_s": 192.8
+    },
+    "timestamp_fmt": "00:14.85"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 15.186,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      964.5018615722656,
+      438.0545349121094
+    ],
+    "meta": {
+      "duration_s": 3.25
+    },
+    "timestamp_fmt": "00:15.19"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 15.269,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      994.4784545898438,
+      438.9642028808594
+    ],
+    "meta": {
+      "speed_px_s": 218.5
+    },
+    "timestamp_fmt": "00:15.27"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 15.77,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      380.85057067871094,
+      291.28330993652344
+    ],
+    "meta": {
+      "duration_s": 8.01,
+      "displacement_px": 55.6
+    },
+    "timestamp_fmt": "00:15.77"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 16.312,
+    "track_id": 32,
+    "class_name": "person",
+    "position": [
+      152.31651306152344,
+      274.8048858642578
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:16.31"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.273,
+    "track_id": 38,
+    "class_name": "person",
+    "position": [
+      212.00184631347656,
+      267.2932662963867
+    ],
+    "meta": {
+      "duration_s": 0.58
+    },
+    "timestamp_fmt": "00:18.27"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.732,
+    "track_id": 41,
+    "class_name": "person",
+    "position": [
+      167.95082092285156,
+      284.47560119628906
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:18.73"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 21.36,
+    "track_id": 44,
+    "class_name": "person",
+    "position": [
+      154.4077606201172,
+      271.99918365478516
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:21.36"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 24.239,
+    "track_id": 48,
+    "class_name": "person",
+    "position": [
+      323.559326171875,
+      270.8919677734375
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:24.24"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 0.5,
+    "track_id": 2,
+    "class_name": "car",
+    "position": [
+      295.35816955566406,
+      226.84619903564453
+    ],
+    "meta": {
+      "duration_s": 0.5
+    },
+    "timestamp_fmt": "00:00.50"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 0.633,
+    "track_id": 7,
+    "class_name": "car",
+    "position": [
+      49.30118942260742,
+      36.27781009674072
+    ],
+    "meta": {
+      "duration_s": 0.63
+    },
+    "timestamp_fmt": "00:00.63"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 0.733,
+    "track_id": 8,
+    "class_name": "car",
+    "position": [
+      66.72724342346191,
+      34.97849082946777
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:00.73"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 0.733,
+    "track_id": 8,
+    "class_name": "car",
+    "position": [
+      66.72724342346191,
+      34.97849082946777
+    ],
+    "meta": {
+      "duration_s": 0.53
+    },
+    "timestamp_fmt": "00:00.73"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 0.967,
+    "track_id": 5,
+    "class_name": "car",
+    "position": [
+      105.35776138305664,
+      34.97869110107422
+    ],
+    "meta": {
+      "duration_s": 0.97
+    },
+    "timestamp_fmt": "00:00.97"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 0.967,
+    "track_id": 9,
+    "class_name": "person",
+    "position": [
+      245.51618194580078,
+      107.19567108154297
+    ],
+    "meta": {
+      "duration_s": 0.57
+    },
+    "timestamp_fmt": "00:00.97"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 1.3,
+    "track_id": 13,
+    "class_name": "car",
+    "position": [
+      281.92828369140625,
+      52.196590423583984
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:01.30"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 1.433,
+    "track_id": 13,
+    "class_name": "car",
+    "position": [
+      279.0917510986328,
+      51.8242301940918
+    ],
+    "meta": {
+      "duration_s": 0.63
+    },
+    "timestamp_fmt": "00:01.43"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 2.033,
+    "track_id": 3,
+    "class_name": "car",
+    "position": [
+      48.570003032684326,
+      186.2334442138672
+    ],
+    "meta": {
+      "duration_s": 2.03
+    },
+    "timestamp_fmt": "00:02.03"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 2.133,
+    "track_id": 15,
+    "class_name": "person",
+    "position": [
+      284.7455291748047,
+      99.70140838623047
+    ],
+    "meta": {
+      "duration_s": 1.2
+    },
+    "timestamp_fmt": "00:02.13"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 2.633,
+    "track_id": 16,
+    "class_name": "car",
+    "position": [
+      95.39359664916992,
+      30.944090843200684
+    ],
+    "meta": {
+      "duration_s": 1.53
+    },
+    "timestamp_fmt": "00:02.63"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 3.2,
+    "track_id": 24,
+    "class_name": "car",
+    "position": [
+      106.06108474731445,
+      34.34553527832031
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:03.20"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.2,
+    "track_id": 24,
+    "class_name": "car",
+    "position": [
+      106.06108474731445,
+      34.34553527832031
+    ],
+    "meta": {
+      "duration_s": 0.67
+    },
+    "timestamp_fmt": "00:03.20"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.367,
+    "track_id": 27,
+    "class_name": "person",
+    "position": [
+      267.9669647216797,
+      105.90151596069336
+    ],
+    "meta": {
+      "duration_s": 0.53
+    },
+    "timestamp_fmt": "00:03.37"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.4,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      238.1902084350586,
+      157.3756332397461
+    ],
+    "meta": {
+      "duration_s": 0.67
+    },
+    "timestamp_fmt": "00:03.40"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.567,
+    "track_id": 4,
+    "class_name": "car",
+    "position": [
+      215.17705535888672,
+      106.65601348876953
+    ],
+    "meta": {
+      "duration_s": 3.57
+    },
+    "timestamp_fmt": "00:03.57"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 4.133,
+    "track_id": 34,
+    "class_name": "car",
+    "position": [
+      84.07862091064453,
+      36.58700370788574
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:04.13"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 4.133,
+    "track_id": 34,
+    "class_name": "car",
+    "position": [
+      84.07862091064453,
+      36.58700370788574
+    ],
+    "meta": {
+      "duration_s": 0.53
+    },
+    "timestamp_fmt": "00:04.13"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 4.367,
+    "track_id": 36,
+    "class_name": "person",
+    "position": [
+      284.7200012207031,
+      110.20331573486328
+    ],
+    "meta": {
+      "duration_s": 0.67
+    },
+    "timestamp_fmt": "00:04.37"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 4.467,
+    "track_id": 37,
+    "class_name": "truck",
+    "position": [
+      164.26593017578125,
+      170.88119506835938
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:04.47"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 4.567,
+    "track_id": 37,
+    "class_name": "truck",
+    "position": [
+      164.31147003173828,
+      169.71753692626953
+    ],
+    "meta": {
+      "duration_s": 0.77
+    },
+    "timestamp_fmt": "00:04.57"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 4.867,
+    "track_id": 39,
+    "class_name": "car",
+    "position": [
+      304.3802032470703,
+      157.08257293701172
+    ],
+    "meta": {
+      "duration_s": 0.57
+    },
+    "timestamp_fmt": "00:04.87"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 5.367,
+    "track_id": 44,
+    "class_name": "person",
+    "position": [
+      27.418885231018066,
+      51.559492111206055
+    ],
+    "meta": {
+      "duration_s": 0.5
+    },
+    "timestamp_fmt": "00:05.37"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 5.633,
+    "track_id": 46,
+    "class_name": "car",
+    "position": [
+      99.19756698608398,
+      39.36653709411621
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:05.63"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 5.633,
+    "track_id": 46,
+    "class_name": "car",
+    "position": [
+      99.19756698608398,
+      39.36653709411621
+    ],
+    "meta": {
+      "duration_s": 0.73
+    },
+    "timestamp_fmt": "00:05.63"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 6.0,
+    "track_id": 6,
+    "class_name": "car",
+    "position": [
+      48.841779708862305,
+      51.307308197021484
+    ],
+    "meta": {
+      "duration_s": 6.0
+    },
+    "timestamp_fmt": "00:06.00"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 6.333,
+    "track_id": 49,
+    "class_name": "car",
+    "position": [
+      84.95716857910156,
+      35.777414321899414
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:06.33"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 6.333,
+    "track_id": 49,
+    "class_name": "car",
+    "position": [
+      84.95716857910156,
+      35.777414321899414
+    ],
+    "meta": {
+      "duration_s": 0.5
+    },
+    "timestamp_fmt": "00:06.33"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 6.5,
+    "track_id": 52,
+    "class_name": "car",
+    "position": [
+      290.30438232421875,
+      228.0853271484375
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:06.50"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 6.867,
+    "track_id": 1,
+    "class_name": "car",
+    "position": [
+      151.19542694091797,
+      73.52508926391602
+    ],
+    "meta": {
+      "duration_s": 6.87
+    },
+    "timestamp_fmt": "00:06.87"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 7.1,
+    "track_id": 57,
+    "class_name": "car",
+    "position": [
+      37.42729377746582,
+      51.56975173950195
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:07.10"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 8.0,
+    "track_id": 3,
+    "class_name": "car",
+    "position": [
+      49.11298370361328,
+      185.7312774658203
+    ],
+    "meta": {
+      "duration_s": 8.0,
+      "displacement_px": 0.8
+    },
+    "timestamp_fmt": "00:08.00"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 8.267,
+    "track_id": 65,
+    "class_name": "car",
+    "position": [
+      102.82348251342773,
+      36.45685577392578
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:08.27"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 8.433,
+    "track_id": 66,
+    "class_name": "person",
+    "position": [
+      202.6593475341797,
+      47.44023895263672
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:08.43"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 8.567,
+    "track_id": 66,
+    "class_name": "person",
+    "position": [
+      202.12162017822266,
+      46.7654914855957
+    ],
+    "meta": {
+      "duration_s": 0.83
+    },
+    "timestamp_fmt": "00:08.57"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 8.667,
+    "track_id": 57,
+    "class_name": "car",
+    "position": [
+      12.571367263793945,
+      64.36716270446777
+    ],
+    "meta": {
+      "duration_s": 2.07
+    },
+    "timestamp_fmt": "00:08.67"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 8.733,
+    "track_id": 65,
+    "class_name": "car",
+    "position": [
+      101.27188491821289,
+      36.77189636230469
+    ],
+    "meta": {
+      "duration_s": 1.0
+    },
+    "timestamp_fmt": "00:08.73"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 9.233,
+    "track_id": 68,
+    "class_name": "person",
+    "position": [
+      209.19237518310547,
+      60.58628273010254
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:09.23"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 9.233,
+    "track_id": 68,
+    "class_name": "person",
+    "position": [
+      209.19237518310547,
+      60.58628273010254
+    ],
+    "meta": {
+      "duration_s": 0.5
+    },
+    "timestamp_fmt": "00:09.23"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 9.333,
+    "track_id": 69,
+    "class_name": "car",
+    "position": [
+      81.60583114624023,
+      36.51839733123779
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:09.33"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 9.733,
+    "track_id": 72,
+    "class_name": "car",
+    "position": [
+      314.9214172363281,
+      163.4685287475586
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:09.73"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 10.9,
+    "track_id": 75,
+    "class_name": "car",
+    "position": [
+      166.13690567016602,
+      224.62640380859375
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:10.90"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 11.4,
+    "track_id": 75,
+    "class_name": "car",
+    "position": [
+      166.47275161743164,
+      218.79554748535156
+    ],
+    "meta": {
+      "duration_s": 1.0
+    },
+    "timestamp_fmt": "00:11.40"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 11.533,
+    "track_id": 2,
+    "class_name": "car",
+    "position": [
+      246.9724349975586,
+      148.60668563842773
+    ],
+    "meta": {
+      "angle_deg": 177.7
+    },
+    "timestamp_fmt": "00:11.53"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 12.3,
+    "track_id": 39,
+    "class_name": "car",
+    "position": [
+      291.5005798339844,
+      125.93021774291992
+    ],
+    "meta": {
+      "duration_s": 8.0,
+      "displacement_px": 41.2
+    },
+    "timestamp_fmt": "00:12.30"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 12.567,
+    "track_id": 79,
+    "class_name": "truck",
+    "position": [
+      212.67520904541016,
+      103.15949630737305
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:12.57"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 12.767,
+    "track_id": 79,
+    "class_name": "truck",
+    "position": [
+      215.87627410888672,
+      103.55964660644531
+    ],
+    "meta": {
+      "duration_s": 0.7
+    },
+    "timestamp_fmt": "00:12.77"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 13.0,
+    "track_id": 2,
+    "class_name": "car",
+    "position": [
+      251.17328643798828,
+      153.96033477783203
+    ],
+    "meta": {
+      "duration_s": 13.0,
+      "displacement_px": 58.3
+    },
+    "timestamp_fmt": "00:13.00"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 13.4,
+    "track_id": 81,
+    "class_name": "car",
+    "position": [
+      90.95827102661133,
+      44.081329345703125
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:13.40"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 13.433,
+    "track_id": 81,
+    "class_name": "car",
+    "position": [
+      90.59389114379883,
+      44.556602478027344
+    ],
+    "meta": {
+      "duration_s": 0.93
+    },
+    "timestamp_fmt": "00:13.43"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 13.8,
+    "track_id": 85,
+    "class_name": "person",
+    "position": [
+      221.24164581298828,
+      127.18860626220703
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:13.80"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 14.0,
+    "track_id": 52,
+    "class_name": "car",
+    "position": [
+      273.7243118286133,
+      218.2219009399414
+    ],
+    "meta": {
+      "duration_s": 8.0,
+      "displacement_px": 26.0
+    },
+    "timestamp_fmt": "00:14.00"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.0,
+    "track_id": 85,
+    "class_name": "person",
+    "position": [
+      220.7227783203125,
+      127.58809661865234
+    ],
+    "meta": {
+      "duration_s": 0.7
+    },
+    "timestamp_fmt": "00:14.00"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 14.1,
+    "track_id": 86,
+    "class_name": "car",
+    "position": [
+      48.45650672912598,
+      53.42495155334473
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:14.10"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 14.133,
+    "track_id": 87,
+    "class_name": "car",
+    "position": [
+      107.43367385864258,
+      31.56224822998047
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:14.13"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.133,
+    "track_id": 86,
+    "class_name": "car",
+    "position": [
+      48.421321868896484,
+      53.40242385864258
+    ],
+    "meta": {
+      "duration_s": 0.53
+    },
+    "timestamp_fmt": "00:14.13"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.2,
+    "track_id": 87,
+    "class_name": "car",
+    "position": [
+      107.12848663330078,
+      31.873257637023926
+    ],
+    "meta": {
+      "duration_s": 0.57
+    },
+    "timestamp_fmt": "00:14.20"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 14.3,
+    "track_id": 88,
+    "class_name": "car",
+    "position": [
+      96.24019622802734,
+      40.442792892456055
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:14.30"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 14.967,
+    "track_id": 90,
+    "class_name": "person",
+    "position": [
+      241.04605102539062,
+      109.99159622192383
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:14.97"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 15.267,
+    "track_id": 90,
+    "class_name": "person",
+    "position": [
+      242.17050170898438,
+      113.57101058959961
+    ],
+    "meta": {
+      "duration_s": 0.8
+    },
+    "timestamp_fmt": "00:15.27"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 15.533,
+    "track_id": 69,
+    "class_name": "car",
+    "position": [
+      13.11231517791748,
+      75.21778297424316
+    ],
+    "meta": {
+      "duration_s": 6.7
+    },
+    "timestamp_fmt": "00:15.53"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 16.167,
+    "track_id": 94,
+    "class_name": "car",
+    "position": [
+      121.19975662231445,
+      35.182769775390625
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:16.17"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 16.2,
+    "track_id": 94,
+    "class_name": "car",
+    "position": [
+      121.15483474731445,
+      35.26884078979492
+    ],
+    "meta": {
+      "duration_s": 0.57
+    },
+    "timestamp_fmt": "00:16.20"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 17.233,
+    "track_id": 72,
+    "class_name": "car",
+    "position": [
+      314.775146484375,
+      163.58822631835938
+    ],
+    "meta": {
+      "duration_s": 8.0,
+      "displacement_px": 0.9
+    },
+    "timestamp_fmt": "00:17.23"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 18.0,
+    "track_id": 105,
+    "class_name": "person",
+    "position": [
+      229.1685028076172,
+      124.21236038208008
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:18.00"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 18.067,
+    "track_id": 106,
+    "class_name": "car",
+    "position": [
+      307.1873779296875,
+      54.61578559875488
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:18.07"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.133,
+    "track_id": 106,
+    "class_name": "car",
+    "position": [
+      306.8971405029297,
+      54.810306549072266
+    ],
+    "meta": {
+      "duration_s": 0.63
+    },
+    "timestamp_fmt": "00:18.13"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 18.167,
+    "track_id": 108,
+    "class_name": "car",
+    "position": [
+      286.1815490722656,
+      91.34942245483398
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:18.17"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 18.5,
+    "track_id": 109,
+    "class_name": "car",
+    "position": [
+      96.58194351196289,
+      36.76594352722168
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:18.50"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 18.5,
+    "track_id": 110,
+    "class_name": "bus",
+    "position": [
+      64.96487426757812,
+      38.24044704437256
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:18.50"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.533,
+    "track_id": 110,
+    "class_name": "bus",
+    "position": [
+      64.89058113098145,
+      38.33838367462158
+    ],
+    "meta": {
+      "duration_s": 0.53
+    },
+    "timestamp_fmt": "00:18.53"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.567,
+    "track_id": 105,
+    "class_name": "person",
+    "position": [
+      228.73602294921875,
+      125.08396911621094
+    ],
+    "meta": {
+      "duration_s": 1.07
+    },
+    "timestamp_fmt": "00:18.57"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 20.3,
+    "track_id": 79,
+    "class_name": "truck",
+    "position": [
+      214.68943786621094,
+      103.03683090209961
+    ],
+    "meta": {
+      "duration_s": 8.23,
+      "displacement_px": 3.0
+    },
+    "timestamp_fmt": "00:20.30"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 20.3,
+    "track_id": 116,
+    "class_name": "person",
+    "position": [
+      278.02020263671875,
+      129.07305145263672
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:20.30"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 20.333,
+    "track_id": 116,
+    "class_name": "person",
+    "position": [
+      277.9579620361328,
+      129.22256469726562
+    ],
+    "meta": {
+      "duration_s": 0.53
+    },
+    "timestamp_fmt": "00:20.33"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 20.7,
+    "track_id": 120,
+    "class_name": "bicycle",
+    "position": [
+      249.0420913696289,
+      88.97974014282227
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:20.70"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 20.733,
+    "track_id": 120,
+    "class_name": "bicycle",
+    "position": [
+      249.0369873046875,
+      88.97045135498047
+    ],
+    "meta": {
+      "duration_s": 0.6
+    },
+    "timestamp_fmt": "00:20.73"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 20.867,
+    "track_id": 88,
+    "class_name": "car",
+    "position": [
+      18.067899703979492,
+      101.21747970581055
+    ],
+    "meta": {
+      "duration_s": 7.07
+    },
+    "timestamp_fmt": "00:20.87"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 21.667,
+    "track_id": 133,
+    "class_name": "car",
+    "position": [
+      59.42243957519531,
+      47.116600036621094
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:21.67"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 21.733,
+    "track_id": 133,
+    "class_name": "car",
+    "position": [
+      59.46511459350586,
+      47.25226402282715
+    ],
+    "meta": {
+      "duration_s": 0.63
+    },
+    "timestamp_fmt": "00:21.73"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 21.767,
+    "track_id": 109,
+    "class_name": "car",
+    "position": [
+      75.65108680725098,
+      52.41860771179199
+    ],
+    "meta": {
+      "duration_s": 3.77
+    },
+    "timestamp_fmt": "00:21.77"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 22.367,
+    "track_id": 39,
+    "class_name": "car",
+    "position": [
+      290.1247863769531,
+      124.19668579101562
+    ],
+    "meta": {
+      "angle_deg": 169.1
+    },
+    "timestamp_fmt": "00:22.37"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 22.367,
+    "track_id": 135,
+    "class_name": "person",
+    "position": [
+      279.2207489013672,
+      99.62025451660156
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:22.37"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 22.433,
+    "track_id": 135,
+    "class_name": "person",
+    "position": [
+      278.87220764160156,
+      99.4200325012207
+    ],
+    "meta": {
+      "duration_s": 1.13
+    },
+    "timestamp_fmt": "00:22.43"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 22.833,
+    "track_id": 141,
+    "class_name": "car",
+    "position": [
+      92.43261337280273,
+      32.96387004852295
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:22.83"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 23.167,
+    "track_id": 143,
+    "class_name": "car",
+    "position": [
+      267.3375473022461,
+      48.9603157043457
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:23.17"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 23.2,
+    "track_id": 143,
+    "class_name": "car",
+    "position": [
+      266.7736358642578,
+      48.99453163146973
+    ],
+    "meta": {
+      "duration_s": 0.6
+    },
+    "timestamp_fmt": "00:23.20"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 23.433,
+    "track_id": 141,
+    "class_name": "car",
+    "position": [
+      90.26354598999023,
+      34.3431282043457
+    ],
+    "meta": {
+      "duration_s": 1.1
+    },
+    "timestamp_fmt": "00:23.43"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 23.567,
+    "track_id": 145,
+    "class_name": "person",
+    "position": [
+      218.68408966064453,
+      147.6262664794922
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:23.57"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 23.6,
+    "track_id": 146,
+    "class_name": "car",
+    "position": [
+      80.10534286499023,
+      37.87295913696289
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:23.60"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 23.6,
+    "track_id": 147,
+    "class_name": "car",
+    "position": [
+      57.610103607177734,
+      45.95259094238281
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:23.60"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 24.0,
+    "track_id": 151,
+    "class_name": "car",
+    "position": [
+      22.38146734237671,
+      50.82433891296387
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:24.00"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 24.3,
+    "track_id": 153,
+    "class_name": "person",
+    "position": [
+      206.4612045288086,
+      130.77539825439453
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:24.30"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 24.4,
+    "track_id": 151,
+    "class_name": "car",
+    "position": [
+      13.618063926696777,
+      54.45549774169922
+    ],
+    "meta": {
+      "duration_s": 1.0
+    },
+    "timestamp_fmt": "00:24.40"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 24.867,
+    "track_id": 108,
+    "class_name": "car",
+    "position": [
+      181.6272430419922,
+      41.65818786621094
+    ],
+    "meta": {
+      "duration_s": 7.2
+    },
+    "timestamp_fmt": "00:24.87"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 25.367,
+    "track_id": 159,
+    "class_name": "car",
+    "position": [
+      246.5729751586914,
+      231.65469360351562
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:25.37"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 25.367,
+    "track_id": 160,
+    "class_name": "car",
+    "position": [
+      16.58352279663086,
+      69.05055618286133
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:25.37"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 25.433,
+    "track_id": 155,
+    "class_name": "person",
+    "position": [
+      236.4141082763672,
+      121.78366470336914
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:25.43"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 25.433,
+    "track_id": 155,
+    "class_name": "person",
+    "position": [
+      236.4141082763672,
+      121.78366470336914
+    ],
+    "meta": {
+      "duration_s": 1.1
+    },
+    "timestamp_fmt": "00:25.43"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 25.6,
+    "track_id": 48,
+    "class_name": "car",
+    "position": [
+      160.4317398071289,
+      34.679189682006836
+    ],
+    "meta": {
+      "duration_s": 19.8
+    },
+    "timestamp_fmt": "00:25.60"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 25.633,
+    "track_id": 160,
+    "class_name": "car",
+    "position": [
+      14.675565719604492,
+      71.70760536193848
+    ],
+    "meta": {
+      "duration_s": 0.77
+    },
+    "timestamp_fmt": "00:25.63"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 25.767,
+    "track_id": 163,
+    "class_name": "car",
+    "position": [
+      183.57553100585938,
+      36.56220054626465
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:25.77"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 25.8,
+    "track_id": 164,
+    "class_name": "person",
+    "position": [
+      99.30282211303711,
+      206.24932861328125
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:25.80"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 25.833,
+    "track_id": 165,
+    "class_name": "car",
+    "position": [
+      285.7421569824219,
+      52.30777359008789
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:25.83"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 25.833,
+    "track_id": 163,
+    "class_name": "car",
+    "position": [
+      182.77459716796875,
+      36.451114654541016
+    ],
+    "meta": {
+      "duration_s": 0.57
+    },
+    "timestamp_fmt": "00:25.83"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 26.0,
+    "track_id": 153,
+    "class_name": "person",
+    "position": [
+      205.95162963867188,
+      130.31478881835938
+    ],
+    "meta": {
+      "duration_s": 2.2
+    },
+    "timestamp_fmt": "00:26.00"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 26.0,
+    "track_id": 164,
+    "class_name": "person",
+    "position": [
+      100.60334777832031,
+      204.4900360107422
+    ],
+    "meta": {
+      "duration_s": 0.7
+    },
+    "timestamp_fmt": "00:26.00"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 26.167,
+    "track_id": 145,
+    "class_name": "person",
+    "position": [
+      218.69622039794922,
+      142.72858810424805
+    ],
+    "meta": {
+      "duration_s": 3.1
+    },
+    "timestamp_fmt": "00:26.17"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 26.4,
+    "track_id": 165,
+    "class_name": "car",
+    "position": [
+      265.7413330078125,
+      50.59575653076172
+    ],
+    "meta": {
+      "duration_s": 1.07
+    },
+    "timestamp_fmt": "00:26.40"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 26.6,
+    "track_id": 167,
+    "class_name": "car",
+    "position": [
+      90.27688217163086,
+      33.578551292419434
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:26.60"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 27.4,
+    "track_id": 147,
+    "class_name": "car",
+    "position": [
+      10.666563034057617,
+      70.36418724060059
+    ],
+    "meta": {
+      "duration_s": 4.3
+    },
+    "timestamp_fmt": "00:27.40"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 27.8,
+    "track_id": 169,
+    "class_name": "car",
+    "position": [
+      97.08430480957031,
+      31.446805000305176
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:27.80"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 27.8,
+    "track_id": 169,
+    "class_name": "car",
+    "position": [
+      97.08430480957031,
+      31.446805000305176
+    ],
+    "meta": {
+      "duration_s": 0.53
+    },
+    "timestamp_fmt": "00:27.80"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 28.1,
+    "track_id": 170,
+    "class_name": "car",
+    "position": [
+      56.65790557861328,
+      50.06507110595703
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:28.10"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 28.267,
+    "track_id": 172,
+    "class_name": "person",
+    "position": [
+      105.90179443359375,
+      175.8943862915039
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:28.27"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 28.267,
+    "track_id": 172,
+    "class_name": "person",
+    "position": [
+      105.90179443359375,
+      175.8943862915039
+    ],
+    "meta": {
+      "duration_s": 0.53
+    },
+    "timestamp_fmt": "00:28.27"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 6.167,
+    "track_id": 3,
+    "class_name": "dog",
+    "position": [
+      204.8043441772461,
+      151.1837615966797
+    ],
+    "meta": {
+      "duration_s": 0.9
+    },
+    "timestamp_fmt": "00:06.17"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 6.5,
+    "track_id": 3,
+    "class_name": "dog",
+    "position": [
+      195.14765167236328,
+      154.23352813720703
+    ],
+    "meta": {
+      "angle_deg": 140.4
+    },
+    "timestamp_fmt": "00:06.50"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 7.033,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      133.9618797302246,
+      128.31579208374023
+    ],
+    "meta": {
+      "duration_s": 2.87
+    },
+    "timestamp_fmt": "00:07.03"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 8.033,
+    "track_id": 7,
+    "class_name": "fire hydrant",
+    "position": [
+      103.92082977294922,
+      160.18921661376953
+    ],
+    "meta": {
+      "duration_s": 0.6
+    },
+    "timestamp_fmt": "00:08.03"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 8.067,
+    "track_id": 6,
+    "class_name": "dog",
+    "position": [
+      155.85565948486328,
+      137.5361328125
+    ],
+    "meta": {
+      "duration_s": 0.97
+    },
+    "timestamp_fmt": "00:08.07"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 9.467,
+    "track_id": 6,
+    "class_name": "dog",
+    "position": [
+      162.07760620117188,
+      139.62560272216797
+    ],
+    "meta": {
+      "angle_deg": 155.8
+    },
+    "timestamp_fmt": "00:09.47"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 11.567,
+    "track_id": 13,
+    "class_name": "bottle",
+    "position": [
+      103.8232307434082,
+      159.55211639404297
+    ],
+    "meta": {
+      "duration_s": 0.63
+    },
+    "timestamp_fmt": "00:11.57"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 12.4,
+    "track_id": 16,
+    "class_name": "suitcase",
+    "position": [
+      122.68797302246094,
+      163.14048767089844
+    ],
+    "meta": {
+      "duration_s": 0.53
+    },
+    "timestamp_fmt": "00:12.40"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 13.667,
+    "track_id": 18,
+    "class_name": "person",
+    "position": [
+      199.82523345947266,
+      153.07748413085938
+    ],
+    "meta": {
+      "duration_s": 0.63
+    },
+    "timestamp_fmt": "00:13.67"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 15.1,
+    "track_id": 6,
+    "class_name": "dog",
+    "position": [
+      160.2331314086914,
+      147.3078384399414
+    ],
+    "meta": {
+      "duration_s": 8.0,
+      "displacement_px": 10.7
+    },
+    "timestamp_fmt": "00:15.10"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 16.833,
+    "track_id": 21,
+    "class_name": "person",
+    "position": [
+      192.11666107177734,
+      126.18172836303711
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:16.83"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 16.967,
+    "track_id": 21,
+    "class_name": "person",
+    "position": [
+      193.455810546875,
+      125.21610641479492
+    ],
+    "meta": {
+      "duration_s": 0.63
+    },
+    "timestamp_fmt": "00:16.97"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 17.033,
+    "track_id": 21,
+    "class_name": "person",
+    "position": [
+      196.89510345458984,
+      123.44254302978516
+    ],
+    "meta": {
+      "angle_deg": 153.8
+    },
+    "timestamp_fmt": "00:17.03"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 17.133,
+    "track_id": 22,
+    "class_name": "dog",
+    "position": [
+      142.32887268066406,
+      169.86504364013672
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:17.13"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 17.467,
+    "track_id": 23,
+    "class_name": "fire hydrant",
+    "position": [
+      106.84213638305664,
+      158.50587463378906
+    ],
+    "meta": {
+      "duration_s": 0.53
+    },
+    "timestamp_fmt": "00:17.47"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 17.767,
+    "track_id": 22,
+    "class_name": "dog",
+    "position": [
+      152.27871704101562,
+      174.00015258789062
+    ],
+    "meta": {
+      "duration_s": 1.13
+    },
+    "timestamp_fmt": "00:17.77"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 17.967,
+    "track_id": 23,
+    "class_name": "fire hydrant",
+    "position": [
+      98.71725845336914,
+      158.9610366821289
+    ],
+    "meta": {
+      "angle_deg": 175.4
+    },
+    "timestamp_fmt": "00:17.97"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 20.167,
+    "track_id": 27,
+    "class_name": "fire hydrant",
+    "position": [
+      106.82867431640625,
+      158.97799682617188
+    ],
+    "meta": {
+      "duration_s": 0.7
+    },
+    "timestamp_fmt": "00:20.17"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 27.6,
+    "track_id": 33,
+    "class_name": "person",
+    "position": [
+      160.24077606201172,
+      142.67387771606445
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:27.60"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 27.633,
+    "track_id": 33,
+    "class_name": "person",
+    "position": [
+      159.98846435546875,
+      142.80641174316406
+    ],
+    "meta": {
+      "duration_s": 0.53
+    },
+    "timestamp_fmt": "00:27.63"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 29.467,
+    "track_id": 37,
+    "class_name": "person",
+    "position": [
+      138.62113571166992,
+      122.83831787109375
+    ],
+    "meta": {
+      "duration_s": 0.67
+    },
+    "timestamp_fmt": "00:29.47"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 29.967,
+    "track_id": 39,
+    "class_name": "fire hydrant",
+    "position": [
+      91.50246810913086,
+      160.46987915039062
+    ],
+    "meta": {
+      "duration_s": 0.87
+    },
+    "timestamp_fmt": "00:29.97"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 31.533,
+    "track_id": 40,
+    "class_name": "dog",
+    "position": [
+      160.3021240234375,
+      153.20904541015625
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:31.53"
+  },
+  {
+    "event_type": "entered_scene",
+    "timestamp": 32.2,
+    "track_id": 43,
+    "class_name": "person",
+    "position": [
+      222.40013885498047,
+      117.9290771484375
+    ],
+    "meta": {},
+    "timestamp_fmt": "00:32.20"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 32.233,
+    "track_id": 42,
+    "class_name": "dog",
+    "position": [
+      229.78897857666016,
+      166.0380630493164
+    ],
+    "meta": {
+      "angle_deg": 140.9
+    },
+    "timestamp_fmt": "00:32.23"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 32.433,
+    "track_id": 40,
+    "class_name": "dog",
+    "position": [
+      158.97650909423828,
+      153.20101165771484
+    ],
+    "meta": {
+      "angle_deg": 173.1
+    },
+    "timestamp_fmt": "00:32.43"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 32.4,
+    "track_id": 42,
+    "class_name": "dog",
+    "position": [
+      230.55870056152344,
+      167.6643295288086
+    ],
+    "meta": {
+      "duration_s": 0.77
+    },
+    "timestamp_fmt": "00:32.40"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 32.933,
+    "track_id": 43,
+    "class_name": "person",
+    "position": [
+      237.7850112915039,
+      135.95838928222656
+    ],
+    "meta": {
+      "duration_s": 1.27
+    },
+    "timestamp_fmt": "00:32.93"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 34.733,
+    "track_id": 40,
+    "class_name": "dog",
+    "position": [
+      180.60426330566406,
+      150.6203384399414
+    ],
+    "meta": {
+      "duration_s": 3.7
+    },
+    "timestamp_fmt": "00:34.73"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 35.6,
+    "track_id": 46,
+    "class_name": "bottle",
+    "position": [
+      105.45829010009766,
+      162.85202026367188
+    ],
+    "meta": {
+      "duration_s": 0.8
+    },
+    "timestamp_fmt": "00:35.60"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 37.4,
+    "track_id": 47,
+    "class_name": "person",
+    "position": [
+      141.10033798217773,
+      125.74468612670898
+    ],
+    "meta": {
+      "duration_s": 0.8
+    },
+    "timestamp_fmt": "00:37.40"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 1.293,
+    "track_id": 6,
+    "class_name": "person",
+    "position": [
+      510.42010498046875,
+      356.4889831542969
+    ],
+    "meta": {
+      "duration_s": 1.29
+    },
+    "timestamp_fmt": "00:01.29"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 1.377,
+    "track_id": 9,
+    "class_name": "person",
+    "position": [
+      540.7621154785156,
+      356.97901916503906
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:01.38"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 2.837,
+    "track_id": 4,
+    "class_name": "person",
+    "position": [
+      1168.1914672851562,
+      677.6171569824219
+    ],
+    "meta": {
+      "speed_px_s": 186.4
+    },
+    "timestamp_fmt": "00:02.84"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.087,
+    "track_id": 15,
+    "class_name": "person",
+    "position": [
+      364.4397430419922,
+      296.60845947265625
+    ],
+    "meta": {
+      "duration_s": 1.13
+    },
+    "timestamp_fmt": "00:03.09"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.254,
+    "track_id": 4,
+    "class_name": "person",
+    "position": [
+      1242.2256469726562,
+      684.8525695800781
+    ],
+    "meta": {
+      "duration_s": 3.25
+    },
+    "timestamp_fmt": "00:03.25"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 6.717,
+    "track_id": 5,
+    "class_name": "person",
+    "position": [
+      440.66387939453125,
+      330.35675048828125
+    ],
+    "meta": {
+      "duration_s": 6.72
+    },
+    "timestamp_fmt": "00:06.72"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 7.092,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      402.4669647216797,
+      336.04209899902344
+    ],
+    "meta": {
+      "duration_s": 7.09
+    },
+    "timestamp_fmt": "00:07.09"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 8.01,
+    "track_id": 5,
+    "class_name": "person",
+    "position": [
+      454.40370178222656,
+      331.95948791503906
+    ],
+    "meta": {
+      "duration_s": 8.01,
+      "displacement_px": 57.7
+    },
+    "timestamp_fmt": "00:08.01"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 8.135,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      416.1506042480469,
+      324.26849365234375
+    ],
+    "meta": {
+      "duration_s": 8.14,
+      "displacement_px": 44.7
+    },
+    "timestamp_fmt": "00:08.13"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 8.427,
+    "track_id": 3,
+    "class_name": "person",
+    "position": [
+      580.8171081542969,
+      401.2295684814453
+    ],
+    "meta": {
+      "duration_s": 8.43
+    },
+    "timestamp_fmt": "00:08.43"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 9.554,
+    "track_id": 19,
+    "class_name": "person",
+    "position": [
+      546.6356811523438,
+      388.2587890625
+    ],
+    "meta": {
+      "angle_deg": 149.0
+    },
+    "timestamp_fmt": "00:09.55"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 9.554,
+    "track_id": 18,
+    "class_name": "person",
+    "position": [
+      473.5974884033203,
+      337.83546447753906
+    ],
+    "meta": {
+      "duration_s": 0.54
+    },
+    "timestamp_fmt": "00:09.55"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.346,
+    "track_id": 20,
+    "class_name": "person",
+    "position": [
+      499.50563049316406,
+      381.6290740966797
+    ],
+    "meta": {
+      "duration_s": 0.5
+    },
+    "timestamp_fmt": "00:10.35"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.68,
+    "track_id": 19,
+    "class_name": "person",
+    "position": [
+      536.1484375,
+      375.90928649902344
+    ],
+    "meta": {
+      "duration_s": 1.67
+    },
+    "timestamp_fmt": "00:10.68"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.763,
+    "track_id": 1,
+    "class_name": "person",
+    "position": [
+      580.4859619140625,
+      385.17662048339844
+    ],
+    "meta": {
+      "duration_s": 10.76
+    },
+    "timestamp_fmt": "00:10.76"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 11.723,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      604.8058166503906,
+      365.3496398925781
+    ],
+    "meta": {
+      "duration_s": 11.72
+    },
+    "timestamp_fmt": "00:11.72"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 11.932,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      608.8179626464844,
+      415.3432159423828
+    ],
+    "meta": {
+      "speed_px_s": 240.4
+    },
+    "timestamp_fmt": "00:11.93"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 11.89,
+    "track_id": 23,
+    "class_name": "person",
+    "position": [
+      503.95867919921875,
+      362.5494079589844
+    ],
+    "meta": {
+      "duration_s": 0.71
+    },
+    "timestamp_fmt": "00:11.89"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 12.933,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      725.238037109375,
+      432.55889892578125
+    ],
+    "meta": {
+      "angle_deg": 143.0
+    },
+    "timestamp_fmt": "00:12.93"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 13.183,
+    "track_id": 28,
+    "class_name": "person",
+    "position": [
+      482.99708557128906,
+      336.7663879394531
+    ],
+    "meta": {
+      "duration_s": 0.92
+    },
+    "timestamp_fmt": "00:13.18"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 13.183,
+    "track_id": 29,
+    "class_name": "person",
+    "position": [
+      578.5190734863281,
+      360.5106964111328
+    ],
+    "meta": {
+      "duration_s": 0.88
+    },
+    "timestamp_fmt": "00:13.18"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 14.101,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      866.9552001953125,
+      449.52198791503906
+    ],
+    "meta": {
+      "duration_s": 14.1,
+      "displacement_px": 59.6
+    },
+    "timestamp_fmt": "00:14.10"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.351,
+    "track_id": 27,
+    "class_name": "person",
+    "position": [
+      507.68666076660156,
+      354.4159240722656
+    ],
+    "meta": {
+      "duration_s": 2.34
+    },
+    "timestamp_fmt": "00:14.35"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.685,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      386.4062957763672,
+      297.931640625
+    ],
+    "meta": {
+      "duration_s": 6.93
+    },
+    "timestamp_fmt": "00:14.69"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 14.768,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      404.423095703125,
+      294.33412170410156
+    ],
+    "meta": {
+      "angle_deg": 142.4
+    },
+    "timestamp_fmt": "00:14.77"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 14.852,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      922.6885986328125,
+      432.5611572265625
+    ],
+    "meta": {
+      "speed_px_s": 192.8
+    },
+    "timestamp_fmt": "00:14.85"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 15.186,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      964.5018615722656,
+      438.0545349121094
+    ],
+    "meta": {
+      "duration_s": 3.25
+    },
+    "timestamp_fmt": "00:15.19"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 15.269,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      994.4784545898438,
+      438.9642028808594
+    ],
+    "meta": {
+      "speed_px_s": 218.5
+    },
+    "timestamp_fmt": "00:15.27"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 15.77,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      380.85057067871094,
+      291.28330993652344
+    ],
+    "meta": {
+      "duration_s": 8.01,
+      "displacement_px": 55.6
+    },
+    "timestamp_fmt": "00:15.77"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 16.312,
+    "track_id": 32,
+    "class_name": "person",
+    "position": [
+      152.31651306152344,
+      274.8048858642578
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:16.31"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.273,
+    "track_id": 38,
+    "class_name": "person",
+    "position": [
+      212.00184631347656,
+      267.2932662963867
+    ],
+    "meta": {
+      "duration_s": 0.58
+    },
+    "timestamp_fmt": "00:18.27"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.732,
+    "track_id": 41,
+    "class_name": "person",
+    "position": [
+      167.95082092285156,
+      284.47560119628906
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:18.73"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 21.36,
+    "track_id": 44,
+    "class_name": "person",
+    "position": [
+      154.4077606201172,
+      271.99918365478516
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:21.36"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 24.239,
+    "track_id": 48,
+    "class_name": "person",
+    "position": [
+      323.559326171875,
+      270.8919677734375
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:24.24"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 1.293,
+    "track_id": 6,
+    "class_name": "person",
+    "position": [
+      510.42010498046875,
+      356.4889831542969
+    ],
+    "meta": {
+      "duration_s": 1.29
+    },
+    "timestamp_fmt": "00:01.29"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 1.377,
+    "track_id": 9,
+    "class_name": "person",
+    "position": [
+      540.7621154785156,
+      356.97901916503906
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:01.38"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 2.837,
+    "track_id": 4,
+    "class_name": "person",
+    "position": [
+      1168.1914672851562,
+      677.6171569824219
+    ],
+    "meta": {
+      "speed_px_s": 186.4
+    },
+    "timestamp_fmt": "00:02.84"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.087,
+    "track_id": 15,
+    "class_name": "person",
+    "position": [
+      364.4397430419922,
+      296.60845947265625
+    ],
+    "meta": {
+      "duration_s": 1.13
+    },
+    "timestamp_fmt": "00:03.09"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 3.254,
+    "track_id": 4,
+    "class_name": "person",
+    "position": [
+      1242.2256469726562,
+      684.8525695800781
+    ],
+    "meta": {
+      "duration_s": 3.25
+    },
+    "timestamp_fmt": "00:03.25"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 6.717,
+    "track_id": 5,
+    "class_name": "person",
+    "position": [
+      440.66387939453125,
+      330.35675048828125
+    ],
+    "meta": {
+      "duration_s": 6.72
+    },
+    "timestamp_fmt": "00:06.72"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 7.092,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      402.4669647216797,
+      336.04209899902344
+    ],
+    "meta": {
+      "duration_s": 7.09
+    },
+    "timestamp_fmt": "00:07.09"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 8.01,
+    "track_id": 5,
+    "class_name": "person",
+    "position": [
+      454.40370178222656,
+      331.95948791503906
+    ],
+    "meta": {
+      "duration_s": 8.01,
+      "displacement_px": 57.7
+    },
+    "timestamp_fmt": "00:08.01"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 8.135,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      416.1506042480469,
+      324.26849365234375
+    ],
+    "meta": {
+      "duration_s": 8.14,
+      "displacement_px": 44.7
+    },
+    "timestamp_fmt": "00:08.13"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 8.427,
+    "track_id": 3,
+    "class_name": "person",
+    "position": [
+      580.8171081542969,
+      401.2295684814453
+    ],
+    "meta": {
+      "duration_s": 8.43
+    },
+    "timestamp_fmt": "00:08.43"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 9.554,
+    "track_id": 19,
+    "class_name": "person",
+    "position": [
+      546.6356811523438,
+      388.2587890625
+    ],
+    "meta": {
+      "angle_deg": 149.0
+    },
+    "timestamp_fmt": "00:09.55"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 9.554,
+    "track_id": 18,
+    "class_name": "person",
+    "position": [
+      473.5974884033203,
+      337.83546447753906
+    ],
+    "meta": {
+      "duration_s": 0.54
+    },
+    "timestamp_fmt": "00:09.55"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.346,
+    "track_id": 20,
+    "class_name": "person",
+    "position": [
+      499.50563049316406,
+      381.6290740966797
+    ],
+    "meta": {
+      "duration_s": 0.5
+    },
+    "timestamp_fmt": "00:10.35"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.68,
+    "track_id": 19,
+    "class_name": "person",
+    "position": [
+      536.1484375,
+      375.90928649902344
+    ],
+    "meta": {
+      "duration_s": 1.67
+    },
+    "timestamp_fmt": "00:10.68"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 10.763,
+    "track_id": 1,
+    "class_name": "person",
+    "position": [
+      580.4859619140625,
+      385.17662048339844
+    ],
+    "meta": {
+      "duration_s": 10.76
+    },
+    "timestamp_fmt": "00:10.76"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 11.723,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      604.8058166503906,
+      365.3496398925781
+    ],
+    "meta": {
+      "duration_s": 11.72
+    },
+    "timestamp_fmt": "00:11.72"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 11.932,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      608.8179626464844,
+      415.3432159423828
+    ],
+    "meta": {
+      "speed_px_s": 240.4
+    },
+    "timestamp_fmt": "00:11.93"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 11.89,
+    "track_id": 23,
+    "class_name": "person",
+    "position": [
+      503.95867919921875,
+      362.5494079589844
+    ],
+    "meta": {
+      "duration_s": 0.71
+    },
+    "timestamp_fmt": "00:11.89"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 12.933,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      725.238037109375,
+      432.55889892578125
+    ],
+    "meta": {
+      "angle_deg": 143.0
+    },
+    "timestamp_fmt": "00:12.93"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 13.183,
+    "track_id": 28,
+    "class_name": "person",
+    "position": [
+      482.99708557128906,
+      336.7663879394531
+    ],
+    "meta": {
+      "duration_s": 0.92
+    },
+    "timestamp_fmt": "00:13.18"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 13.183,
+    "track_id": 29,
+    "class_name": "person",
+    "position": [
+      578.5190734863281,
+      360.5106964111328
+    ],
+    "meta": {
+      "duration_s": 0.88
+    },
+    "timestamp_fmt": "00:13.18"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 14.101,
+    "track_id": 2,
+    "class_name": "person",
+    "position": [
+      866.9552001953125,
+      449.52198791503906
+    ],
+    "meta": {
+      "duration_s": 14.1,
+      "displacement_px": 59.6
+    },
+    "timestamp_fmt": "00:14.10"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.351,
+    "track_id": 27,
+    "class_name": "person",
+    "position": [
+      507.68666076660156,
+      354.4159240722656
+    ],
+    "meta": {
+      "duration_s": 2.34
+    },
+    "timestamp_fmt": "00:14.35"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 14.685,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      386.4062957763672,
+      297.931640625
+    ],
+    "meta": {
+      "duration_s": 6.93
+    },
+    "timestamp_fmt": "00:14.69"
+  },
+  {
+    "event_type": "direction_change",
+    "timestamp": 14.768,
+    "track_id": 7,
+    "class_name": "person",
+    "position": [
+      404.423095703125,
+      294.33412170410156
+    ],
+    "meta": {
+      "angle_deg": 142.4
+    },
+    "timestamp_fmt": "00:14.77"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 14.852,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      922.6885986328125,
+      432.5611572265625
+    ],
+    "meta": {
+      "speed_px_s": 192.8
+    },
+    "timestamp_fmt": "00:14.85"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 15.186,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      964.5018615722656,
+      438.0545349121094
+    ],
+    "meta": {
+      "duration_s": 3.25
+    },
+    "timestamp_fmt": "00:15.19"
+  },
+  {
+    "event_type": "fast_movement",
+    "timestamp": 15.269,
+    "track_id": 26,
+    "class_name": "person",
+    "position": [
+      994.4784545898438,
+      438.9642028808594
+    ],
+    "meta": {
+      "speed_px_s": 218.5
+    },
+    "timestamp_fmt": "00:15.27"
+  },
+  {
+    "event_type": "loitering",
+    "timestamp": 15.77,
+    "track_id": 16,
+    "class_name": "person",
+    "position": [
+      380.85057067871094,
+      291.28330993652344
+    ],
+    "meta": {
+      "duration_s": 8.01,
+      "displacement_px": 55.6
+    },
+    "timestamp_fmt": "00:15.77"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 16.312,
+    "track_id": 32,
+    "class_name": "person",
+    "position": [
+      152.31651306152344,
+      274.8048858642578
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:16.31"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.273,
+    "track_id": 38,
+    "class_name": "person",
+    "position": [
+      212.00184631347656,
+      267.2932662963867
+    ],
+    "meta": {
+      "duration_s": 0.58
+    },
+    "timestamp_fmt": "00:18.27"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 18.732,
+    "track_id": 41,
+    "class_name": "person",
+    "position": [
+      167.95082092285156,
+      284.47560119628906
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:18.73"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 21.36,
+    "track_id": 44,
+    "class_name": "person",
+    "position": [
+      154.4077606201172,
+      271.99918365478516
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:21.36"
+  },
+  {
+    "event_type": "exited_scene",
+    "timestamp": 24.239,
+    "track_id": 48,
+    "class_name": "person",
+    "position": [
+      323.559326171875,
+      270.8919677734375
+    ],
+    "meta": {
+      "duration_s": 0.75
+    },
+    "timestamp_fmt": "00:24.24"
+  }
+]
