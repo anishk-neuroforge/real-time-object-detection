@@ -1,0 +1,40 @@
+# Video Understanding Agent — requirements
+# Install: pip install -r requirements.txt
+
+# Core vision
+ultralytics>=8.3.0          # YOLOv11n + ByteTrack built-in
+opencv-python>=4.8.0
+numpy>=1.26.0
+
+# Phase 6 (captioning) — install when you reach Phase 6
+# transformers>=4.40.0
+# accelerate>=0.30.0
+# Pillow>=10.0.0
+
+# Phase 7 (vector memory)
+# faiss-cpu>=1.8.0           # or faiss-gpu if you have CUDA
+# chromadb>=0.5.0            # alternative to FAISS
+
+# Phase 8 (database)
+# No extra install — sqlite3 is in Python stdlib
+
+# Phase 9-10 (agent + LLM)
+# groq>=0.9.0
+# langchain>=0.2.0
+# langchain-groq>=0.1.0
+
+# Phase 12 (anomaly detection)
+# scikit-learn>=1.4.0
+
+# Phase 13 (speech)
+# openai-whisper>=20231117
+# TTS>=0.22.0               # coqui-tts
+
+# Phase 14 (API)
+# fastapi>=0.111.0
+# uvicorn[standard]>=0.30.0
+# websockets>=12.0
+
+# Phase 15 (MLOps)
+# mlflow>=2.13.0
+# prometheus-client>=0.20.0
